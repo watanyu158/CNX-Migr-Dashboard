@@ -3372,8 +3372,8 @@ async function loadData(){
     // ── อัพเดท UI ─────────────────────────────────────────────────────────
     const _e = id=>document.getElementById(id);
     const thM=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
-    const fd = new Date(ins.finish_date+'T00:00:00');
-    const finTH = `${fd.getDate()} ${thM[fd.getMonth()]} ${(fd.getFullYear()+543)%100}`;
+    const fd = ins.finish_date ? new Date(ins.finish_date+'T00:00:00') : null;
+    const finTH = fd ? `${fd.getDate()} ${thM[fd.getMonth()]} ${(fd.getFullYear()+543)%100}` : '–';
 
     // topbar
     const TOTAL_CNX = meta.total || 0; window.TOTAL_CNX = TOTAL_CNX;
@@ -3550,7 +3550,12 @@ async function loadData(){
     if(rv[0]) rv[0].textContent=Number(ins.daily_rate).toFixed(1);
     if(rv[1]) rv[1].textContent=ins.req_rate;
     document.querySelectorAll('.ins-warn').forEach(w=>{
-      if(ins.days_late>0){
+      if(!ins.daily_rate || ins.daily_rate<=0){
+        w.textContent='⏳ ยังไม่มีข้อมูลการติดตั้ง';
+        w.style.color='var(--text2)';
+        w.style.background='rgba(148,163,184,.08)';
+        w.style.borderColor='rgba(148,163,184,.2)';
+      } else if(ins.days_late>0){
         w.textContent=`⚠ ถ้าไม่เพิ่ม → เสร็จ ${finTH} — ช้ากว่าเป้า ${ins.days_late} วัน`;
         w.style.color='var(--danger)';
         w.style.background='rgba(239,68,68,.08)';
@@ -3578,13 +3583,16 @@ async function loadData(){
     // pills คาดเสร็จ / วันเหลือ
     document.querySelectorAll('.ip-val').forEach(el=>{
       const lbl=el.nextElementSibling?.textContent||'';
-      if(lbl==='คาดเสร็จ') el.textContent=finTH;
-      if(lbl==='วันเหลือ') el.textContent=ins.days_left;
+      if(lbl==='คาดเสร็จ') el.textContent=finTH||'–';
+      if(lbl==='วันเหลือ') el.textContent=ins.days_left||'–';
     });
     document.querySelectorAll('.ip-sub').forEach(el=>{
       const lbl=el.previousElementSibling?.textContent||el.parentElement?.querySelector('.ip-lbl')?.textContent||'';
       if(el.closest('.p-date')){
-        if(ins.days_late>0){
+        if(!ins.daily_rate || ins.daily_rate<=0){
+          el.textContent='ยังไม่มีข้อมูล';
+          el.style.color='var(--text3)';
+        } else if(ins.days_late>0){
           el.textContent='ช้า '+ins.days_late+' วัน';
           el.style.color='var(--danger)';
         } else if(ins.days_early>0){
