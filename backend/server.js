@@ -57,7 +57,7 @@ function parseData() {
 
   // ── คำนวณ PROJ_START / PROJ_END จาก col T(19)=เริ่ม, col V(21)=สิ้นสุด ──
   let PROJ_START = null, PROJ_END = null;
-  for (let i = 2; i < hktRows.length; i++) {
+  for (let i = 1; i < hktRows.length; i++) {
     const r = hktRows[i]; if (!r) continue;
     const dStart = toDate(r[19]); // col T = วันที่เริ่ม
     const dEnd   = toDate(r[21]); // col V = วันที่สิ้นสุด
@@ -102,7 +102,7 @@ function parseData() {
   const swInfSiteMap = {};
   const devices = [], typeMap = {};
 
-  for (let i = 2; i < hktRows.length; i++) {
+  for (let i = 1; i < hktRows.length; i++) {
     const r = hktRows[i]; if (!r || !r.length) continue;
     if (r[0]) curSite = String(r[0]).trim();
     const device = r[3] ? String(r[3]).trim() : null;
@@ -328,7 +328,7 @@ function parseData() {
   // ── locations: site → room ──
   const locationMap = {};
   let locSite = null;
-  for (let i = 2; i < hktRows.length; i++) {
+  for (let i = 1; i < hktRows.length; i++) {
     const r = hktRows[i];
     if (!r) continue;
     if (r[0]) locSite = String(r[0]).trim();
@@ -536,7 +536,7 @@ function parseData() {
 
       // loop ทุก row หา plan date ใน range วันนี้ - 14 วัน
       let upSite = null;
-      for (let i = 2; i < hktRows.length; i++) {
+      for (let i = 1; i < hktRows.length; i++) {
         const r = hktRows[i]; if (!r) continue;
         if (r[0]) upSite = String(r[0]).trim();
         if (!upSite) continue;
