@@ -50,13 +50,13 @@
 body{font-family:'IBM Plex Sans Thai','Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--text);font-size:14px;-webkit-font-smoothing:antialiased;background-image:radial-gradient(circle at 20% 10%,rgba(88,166,255,.05) 0,transparent 40%),radial-gradient(circle at 80% 90%,rgba(63,185,80,.04) 0,transparent 40%);background-attachment:fixed}
 
 /* TOPBAR */
-.topbar{background:linear-gradient(135deg,#010409 0%,#161b22 50%,#0d1117 100%);color:#e2e8f0;padding:0 20px;height:54px;display:flex;align-items:center;justify-content:space-between;gap:8px;box-shadow:0 4px 20px rgba(0,0,0,.5);border-bottom:1px solid #30363d}
+.topbar{background:linear-gradient(135deg,#010409 0%,#161b22 50%,#0d1117 100%);color:var(--text);padding:0 20px;height:54px;display:flex;align-items:center;justify-content:space-between;gap:8px;box-shadow:0 4px 20px rgba(0,0,0,.5);border-bottom:1px solid #30363d}
 .tb-l{display:flex;align-items:center;gap:10px}
 .tb-logo{width:30px;height:30px;background:rgba(255,255,255,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px}
 .tb-title{font-size:14px;font-weight:600}
 .tb-sub{font-size:10px;opacity:.7}
 .sdot-wrap{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);padding:3px 10px;border-radius:99px;font-size:11px;font-weight:600;display:flex;align-items:center;gap:4px}
-.sdot{width:7px;height:7px;border-radius:50%;background:#7a8f4c;animation:pulse 2s infinite}
+.sdot{width:7px;height:7px;border-radius:50%;background:var(--success);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 2px rgba(43,196,138,.3)}50%{box-shadow:0 0 0 5px rgba(43,196,138,.1)}}
 .tb-stats{display:flex;gap:14px}
 .tb-stat .v{font-size:14px;font-weight:700;line-height:1}
@@ -76,10 +76,10 @@ body{font-family:'IBM Plex Sans Thai','Segoe UI',Tahoma,sans-serif;background:va
 .ins-alert-card{flex:1;min-width:0;background:var(--card);border:1px solid rgba(251,191,36,0.3);border-left:4px solid var(--danger);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
 .ins-alert-head{display:flex;align-items:flex-start;gap:10px}
 .ins-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#fbbf24,#f87171);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;box-shadow:0 3px 10px rgba(255,159,67,.35)}
-.ins-big{font-size:15px;font-weight:700;color:#b45309;line-height:1.3}
+.ins-big{font-size:15px;font-weight:700;color:var(--text);line-height:1.3}
 .ins-big em{font-size:22px;font-style:normal;color:var(--warning);margin-right:2px}
-.ins-pct-tag{font-size:11px;font-weight:500;color:var(--primary);background:rgba(78,158,255,0.15);padding:2px 8px;border-radius:99px;margin-left:4px;white-space:nowrap}
-.ins-rate-row{display:flex;align-items:center;gap:8px;background:#faf6ef;border-radius:8px;padding:8px 12px;flex-wrap:wrap}
+.ins-pct-tag{font-size:11px;font-weight:500;color:var(--warning);background:var(--warning-l);padding:2px 8px;border-radius:99px;margin-left:4px;white-space:nowrap;border:1px solid rgba(210,153,34,0.3)}
+.ins-rate-row{display:flex;align-items:center;gap:8px;background:var(--bg-2);border-radius:8px;padding:8px 12px;flex-wrap:wrap}
 .ins-rate-lbl{font-size:12px;color:var(--text2)}
 .ins-rate-val{font-size:18px;font-weight:700;color:var(--text)}
 .ins-rate-target{color:var(--danger)}
@@ -196,14 +196,14 @@ main{max-width:1360px;margin:0 auto;padding:18px 14px}
 .hmc .hmp{font-size:24px;font-weight:700;line-height:1}
 .hmc .hms{font-size:10px;margin-top:3px}
 .hm0{background:var(--bg-2);color:var(--text3);border-color:var(--border)}
-.hmlo{background:rgba(251,191,36,0.15);color:#fbbf24}
-.hmmi{background:rgba(78,158,255,0.15);color:#4e9eff}
+.hmlo{background:rgba(251,191,36,0.15);color:var(--warning)}
+.hmmi{background:rgba(78,158,255,0.15);color:var(--primary)}
 .hmhi{background:var(--success-l);color:var(--success)}
 .hmfu{background:linear-gradient(135deg,#7a8f4c,#0e9e73);color:#fff}
 
 /* HOLD */
 .hold-tog{display:flex;align-items:center;justify-content:space-between;background:var(--hold-l);border:1px solid #d8b4fe;border-radius:var(--rsm);padding:10px 15px;cursor:pointer;transition:.2s;user-select:none}
-.hold-tog:hover{background:#ede9fe}
+.hold-tog:hover{background:var(--primary-l)}
 .hold-lbl{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--hold)}
 .hold-badge{background:var(--hold);color:#fff;padding:2px 9px;border-radius:99px;font-size:11px;font-weight:600}
 
@@ -212,17 +212,17 @@ main{max-width:1360px;margin:0 auto;padding:18px 14px}
 .bs{background:var(--success-l);color:var(--success)}
 .bon{background:var(--primary-l);color:var(--primary)}
 .bho{background:var(--hold-l);color:var(--hold)}
-.bpe{background:#f5ede0;color:var(--text2)}
+.bpe{background:var(--bg-2);color:var(--text2)}
 
 /* TABLE */
 .filters{display:flex;gap:7px;margin-bottom:10px;flex-wrap:wrap}
 .filters select,.filters input{padding:7px 10px;border:1px solid var(--border);border-radius:7px;font-size:12px;font-family:inherit;background:var(--card);color:var(--text);outline:none}
 .tblw{overflow-x:auto;border-radius:var(--rsm);border:1px solid var(--border)}
 table{width:100%;border-collapse:collapse;font-size:12px}
-th{background:#faf6ef;padding:9px 11px;text-align:left;border-bottom:1px solid var(--border);color:var(--text2);font-size:11px;text-transform:uppercase;font-weight:600;white-space:nowrap}
+th{background:var(--bg-2);padding:9px 11px;text-align:left;border-bottom:1px solid var(--border);color:var(--text2);font-size:11px;text-transform:uppercase;font-weight:600;white-space:nowrap}
 td{padding:8px 11px;border-bottom:1px solid var(--border)}
 tr:last-child td{border-bottom:none}
-tr:hover td{background:#faf6ef}
+tr:hover td{background:var(--bg-2)}
 .pager{display:flex;align-items:center;justify-content:space-between;padding:10px 0 0;font-size:12px;color:var(--text2)}
 .pager button{padding:5px 12px;border:1px solid var(--border);border-radius:7px;background:var(--card);cursor:pointer;font-size:12px;font-family:inherit;transition:.2s}
 .pager button:hover:not(:disabled){background:var(--primary-l);border-color:var(--primary-m);color:var(--primary)}
@@ -236,7 +236,7 @@ tr:hover td{background:#faf6ef}
 .fgb.open{display:block}
 .locrow{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--border);gap:10px;transition:.2s;border-radius:6px;margin:2px 4px}
 .locrow:last-child{border-bottom:none}
-.locrow:hover{background:#faf6ef}
+.locrow:hover{background:var(--bg-2)}
 .locname{font-size:14px;font-weight:600;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text)}
 .loci{text-align:right;flex-shrink:0}
 .locc{font-size:12px;font-weight:700;color:var(--text)}
@@ -254,7 +254,7 @@ tr:hover td{background:#faf6ef}
 .fpc-pct{font-size:16px;font-weight:700;padding:3px 10px;border-radius:99px}
 .fpc-big{font-size:24px;font-weight:700;line-height:1}
 .fpc-sub{font-size:11px;color:var(--text2);margin:3px 0 9px}
-.fpc-bar{height:6px;background:#f5ede0;border-radius:99px;overflow:hidden;margin-bottom:11px}
+.fpc-bar{height:6px;background:var(--bg-2);border-radius:99px;overflow:hidden;margin-bottom:11px}
 .fpc-fill{height:100%;border-radius:99px}
 .fpc-cats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
 .fcc{background:var(--bg);border-radius:7px;padding:9px}
@@ -288,12 +288,12 @@ tr:hover td{background:#faf6ef}
 
 /* ── SITE BREAKDOWN TABLE ─────────────────────────────────── */
 .fab-table{width:100%;border-collapse:collapse;font-size:12px;min-width:600px}
-.fab-table th{background:#faf6ef;padding:7px 10px;text-align:left;border-bottom:1px solid var(--border);color:var(--text2);font-size:11px;font-weight:600;white-space:nowrap}
-.fab-table .sub-head th{background:#f1f5ff;font-size:10px;color:var(--text3);padding:4px 10px;border-bottom:1px solid var(--border)}
+.fab-table th{background:var(--bg-2);padding:7px 10px;text-align:left;border-bottom:1px solid var(--border);color:var(--text2);font-size:11px;font-weight:600;white-space:nowrap}
+.fab-table .sub-head th{background:var(--primary-l);font-size:10px;color:var(--text3);padding:4px 10px;border-bottom:1px solid var(--border)}
 .fab-table td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
-.fab-table tfoot td{padding:9px 10px;font-weight:600;background:#faf6ef;border-top:2px solid var(--border)}
+.fab-table tfoot td{padding:9px 10px;font-weight:600;background:var(--bg-2);border-top:2px solid var(--border)}
 .fab-table tr:last-child td{border-bottom:none}
-.fab-table tbody tr:hover td{background:#faf6ef}
+.fab-table tbody tr:hover td{background:var(--bg-2)}
 .fab-name{display:flex;align-items:center;gap:7px;font-weight:600}
 .fab-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
 .fab-done{font-weight:600;color:var(--text)}
@@ -336,11 +336,11 @@ main { padding: 12px 10px; }
 .fab-bd-pct{font-size:12px;font-weight:700;padding:2px 7px;border-radius:99px}
 .fab-bd-total{font-size:11px;color:var(--text2);margin-bottom:8px;line-height:1.3}
 .fab-bd-total strong{font-size:15px;font-weight:700;color:var(--text)}
-.fab-bd-bar{height:4px;background:#f5ede0;border-radius:99px;overflow:hidden;margin-bottom:8px}
+.fab-bd-bar{height:4px;background:var(--bg-2);border-radius:99px;overflow:hidden;margin-bottom:8px}
 .fab-bd-fill{height:100%;border-radius:99px;transition:width 1s ease}
 .fab-bd-cats{display:flex;flex-direction:column;gap:4px}
 .fab-bd-cat{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--text2)}
-.fab-bd-cat-bar{flex:1;height:3px;background:#f5ede0;border-radius:99px;overflow:hidden}
+.fab-bd-cat-bar{flex:1;height:3px;background:var(--bg-2);border-radius:99px;overflow:hidden}
 .fab-bd-cat-fill{height:100%;border-radius:99px}
 .fab-bd-cat-val{font-size:10px;font-weight:600;min-width:30px;text-align:right;color:var(--text)}
 .fab-bd-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
@@ -666,11 +666,11 @@ main { padding: 12px 10px; }
 .fab-bd-pct{font-size:12px;font-weight:700;padding:2px 7px;border-radius:99px}
 .fab-bd-total{font-size:11px;color:var(--text2);margin-bottom:8px;line-height:1.3}
 .fab-bd-total strong{font-size:15px;font-weight:700;color:var(--text)}
-.fab-bd-bar{height:4px;background:#f5ede0;border-radius:99px;overflow:hidden;margin-bottom:8px}
+.fab-bd-bar{height:4px;background:var(--bg-2);border-radius:99px;overflow:hidden;margin-bottom:8px}
 .fab-bd-fill{height:100%;border-radius:99px;transition:width 1s ease}
 .fab-bd-cats{display:flex;flex-direction:column;gap:4px}
 .fab-bd-cat{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--text2)}
-.fab-bd-cat-bar{flex:1;height:3px;background:#f5ede0;border-radius:99px;overflow:hidden}
+.fab-bd-cat-bar{flex:1;height:3px;background:var(--bg-2);border-radius:99px;overflow:hidden}
 .fab-bd-cat-fill{height:100%;border-radius:99px}
 .fab-bd-cat-val{font-size:10px;font-weight:600;min-width:30px;text-align:right;color:var(--text)}
 .fab-bd-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
@@ -951,7 +951,7 @@ main { padding: 12px 10px; }
 
   <!-- SW/Infra site breakdown -->
   <div class="card" style="margin-bottom:14px">
-    <div class="ch"><div class="chi" style="background:#eff6ff;color:#1d4ed8">🔀</div>Switch & Infra แยกตามสถานที่</div>
+    <div class="ch"><div class="chi" style="background:var(--primary-l);color:var(--primary)">🔀</div>Switch & Infra แยกตามสถานที่</div>
     <div style="overflow-x:auto"><table class="fab-table">
       <thead><tr>
         <th>สถานที่</th>
@@ -971,7 +971,7 @@ main { padding: 12px 10px; }
 
   <!-- AP site breakdown -->
   <div class="card" style="margin-bottom:14px">
-    <div class="ch"><div class="chi" style="background:#f0fdf4;color:#15803d">📶</div>AP แยกตามสถานที่</div>
+    <div class="ch"><div class="chi" style="background:var(--success-l);color:var(--success)">📶</div>AP แยกตามสถานที่</div>
     <div style="overflow-x:auto"><table class="fab-table">
       <thead><tr>
         <th>สถานที่</th>
@@ -1104,7 +1104,7 @@ main { padding: 12px 10px; }
       </div>
     </div>
     <div style="height:220px"><canvas id="prog-ap-c"></canvas></div>
-    <div class="cleg"><div class="cl"><div class="cld" style="border-color:#c4d9a0"></div>แผน (%)</div><div class="cl"><div class="cll" style="background:#7a8f4c"></div>จริง (%)</div></div>
+    <div class="cleg"><div class="cl"><div class="cld" style="border-color:var(--success)"></div>แผน (%)</div><div class="cl"><div class="cll" style="background:var(--success)"></div>จริง (%)</div></div>
   </div>
 
   <!-- Per Site charts -->
@@ -1187,7 +1187,7 @@ main { padding: 12px 10px; }
     <div style="height:220px"><canvas id="fab-total-bar-c"></canvas></div>
     <div style="display:flex;gap:14px;margin-top:8px;font-size:11px;color:var(--text2)">
       <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:3px;border-radius:2px;background:var(--primary);display:inline-block"></span>Switch ติดตั้งแล้ว</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:3px;border-radius:2px;background:#7a8f4c;display:inline-block"></span>AP ติดตั้งแล้ว</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:3px;border-radius:2px;background:var(--success);display:inline-block"></span>AP ติดตั้งแล้ว</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:3px;border-radius:2px;background:var(--warning);display:inline-block"></span>Infra ติดตั้งแล้ว</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:2px;border-top:2px dashed var(--text3);display:inline-block"></span>เป้าหมายทั้งหมด</span>
     </div>
@@ -1232,7 +1232,7 @@ main { padding: 12px 10px; }
     <div class="g2" style="grid-template-columns:1fr 1fr;gap:14px;align-content:start">
       <div class="card"><div class="ch" style="font-size:12px;color:var(--text2);font-weight:500;margin-bottom:9px">✅ การประเมินโครงการ</div>
         <div class="pcard" style="margin-bottom:7px"><div class="pc-l">ความคืบหน้าตามแผน</div><div class="pc-v" id="plan-plan-pct">–%</div></div>
-        <div class="pcard" style="margin-bottom:7px"><div class="pc-l">ความคืบหน้าปัจจุบัน</div><div class="pc-v grn" id="plan-act-pct">–%</div><div style="height:5px;background:#f5ede0;border-radius:99px;margin-top:5px;overflow:hidden"><div id="plan-act-bar" style="height:100%;width:0%;background:var(--success);border-radius:99px"></div></div></div>
+        <div class="pcard" style="margin-bottom:7px"><div class="pc-l">ความคืบหน้าปัจจุบัน</div><div class="pc-v grn" id="plan-act-pct">–%</div><div style="height:5px;background:var(--bg-2);border-radius:99px;margin-top:5px;overflow:hidden"><div id="plan-act-bar" style="height:100%;width:0%;background:var(--success);border-radius:99px"></div></div></div>
         <div class="pcard"><div class="pc-l">สถานะ</div><div class="pc-v red" id="plan-status">–</div></div>
       </div>
       <div class="card"><div class="ch" style="font-size:12px;color:var(--text2);font-weight:500;margin-bottom:9px">⚡ ข้อมูลการติดตั้งจริง</div>
@@ -1240,7 +1240,7 @@ main { padding: 12px 10px; }
         <div class="pcard" style="margin-bottom:7px"><div class="pc-l">เฉลี่ย/วัน</div><div class="pc-v" id="plan-daily-rate">– อุปกรณ์/วัน</div></div>
         <div class="pcard" style="margin-bottom:7px"><div class="pc-l">คาดว่าจะเสร็จ</div><div class="pc-v red" id="plan-finish-date">–</div></div>
         <div style="font-size:11px;color:var(--text2);margin:6px 0 4px">ประสิทธิภาพ:</div>
-        <div style="display:flex;align-items:center;gap:7px"><span style="font-size:11px;color:var(--text2)" id="plan-eff-label">–/วัน</span><div style="flex:1;height:8px;background:#f5ede0;border-radius:99px;overflow:hidden"><div id="plan-eff-bar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--danger),#ff8a8a);border-radius:99px"></div></div><span style="font-size:11px;font-weight:700;color:var(--danger)" id="plan-eff-pct">–%</span></div>
+        <div style="display:flex;align-items:center;gap:7px"><span style="font-size:11px;color:var(--text2)" id="plan-eff-label">–/วัน</span><div style="flex:1;height:8px;background:var(--bg-2);border-radius:99px;overflow:hidden"><div id="plan-eff-bar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--danger),#ff8a8a);border-radius:99px"></div></div><span style="font-size:11px;font-weight:700;color:var(--danger)" id="plan-eff-pct">–%</span></div>
         <div style="text-align:right;font-size:10px;margin-top:2px" id="plan-eff-status">⚠ ต่ำกว่าเป้าหมาย</div>
       </div>
     </div>
@@ -2363,7 +2363,7 @@ function buildProgressCharts(){
         '<div style="width:10px;height:10px;border-radius:50%;background:'+(f.c||'#b8593a')+';flex-shrink:0"></div>'+
         '<span style="font-size:13px;font-weight:700">'+fname+'</span>'+
         '<div style="display:flex;gap:8px;margin-left:auto;font-size:11px">'+
-          '<span style="color:#d98967">SW: '+swPctLbl+'</span>'+
+          '<span style="color:var(--primary)">SW: '+swPctLbl+'</span>'+
           ''+ // CNX ไม่มี AP per site
         '</div>'+
       '</div>'+
@@ -2371,8 +2371,8 @@ function buildProgressCharts(){
       '<div class="cleg" style="margin-top:6px">'+
         '<div class="cl"><div class="cld" style="border-color:rgba(78,158,255,0.5)"></div>SW แผน</div>'+
         '<div class="cl"><div class="cll" style="background:var(--primary)"></div>SW จริง</div>'+
-        '<div class="cl"><div class="cld" style="border-color:#c4d9a0"></div>AP แผน</div>'+
-        '<div class="cl"><div class="cll" style="background:#7a8f4c"></div>AP จริง</div>'+
+        '<div class="cl"><div class="cld" style="border-color:var(--success)"></div>AP แผน</div>'+
+        '<div class="cl"><div class="cll" style="background:var(--success)"></div>AP จริง</div>'+
         '<div class="cl" style="color:var(--danger);font-size:11px">| วันนี้</div>'+
       '</div>';
     wrap.appendChild(div);
@@ -2880,7 +2880,7 @@ function buildGraphs(){
       ${chartHtml}
       <div style="display:flex;gap:12px;margin-top:8px;font-size:11px;color:var(--text2);flex-wrap:wrap">
         <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--primary);display:inline-block"></span>Switch</span>
-        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:#7a8f4c;display:inline-block"></span>AP</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--success);display:inline-block"></span>AP</span>
         <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--warning);display:inline-block"></span>Infra</span>
         <span style="display:flex;align-items:center;gap:4px"><span style="width:16px;height:0;border-top:2px dashed ${fabColor};display:inline-block"></span>เป้าตามแผน</span>
       </div>`;
@@ -3736,7 +3736,7 @@ async function manualRefresh(){
 async function exportPDF(){
   const pw=window.open('','_blank','width=1280,height=900');
   if(!pw){alert('กรุณาอนุญาต popup');return;}
-  pw.document.write('<html><body style="display:flex;align-items:center;justify-content:center;height:100vh;background:#3d2817;color:#e8b99b;font-family:sans-serif"><div style="text-align:center"><div style="font-size:40px">📊</div><div style="margin-top:12px">กำลังเตรียม PDF...</div></div></body></html>');
+  pw.document.write('<html><body style="display:flex;align-items:center;justify-content:center;height:100vh;background:var(--bg-2);color:var(--text2);font-family:sans-serif"><div style="text-align:center"><div style="font-size:40px">📊</div><div style="margin-top:12px">กำลังเตรียม PDF...</div></div></body></html>');
   pw.document.close();
   const active=document.querySelector('.tab.on');
   const activeName=active?.getAttribute('onclick')?.match(/'(\w+)'/)?.[1]||'overview';
@@ -3883,7 +3883,7 @@ th,td{padding:3px 4px!important}
 <div style="background:linear-gradient(135deg,#3d2817,#2d3f6b);color:#fff;padding:8px 14px;
   margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;
   -webkit-print-color-adjust:exact;print-color-adjust:exact;border-radius:8px">
-  <div style="font-size:14px;font-weight:700">📊 SAT Migration Dashboard — <span style="color:#e8b99b">CNX</span></div>
+  <div style="font-size:14px;font-weight:700">📊 SAT Migration Dashboard — <span style="color:var(--text2)">CNX</span></div>
   <span style="font-size:10px;opacity:.8">${date}</span>
 </div>
 ${wrapper.outerHTML}
