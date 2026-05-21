@@ -12,45 +12,45 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* Indigo-Purple Dark Theme */
-  --bg:#13111c;                /* deep purple-black */
-  --bg-2:#1c1830;              /* dark indigo */
-  --card:#252140;              /* indigo card */
-  --border:#3d3560;            /* purple border */
-  --border-l:#322c50;          /* lighter border */
+  /* Dark Classic — High contrast professional */
+  --bg:#0d1117;                  /* GitHub dark bg */
+  --bg-2:#161b22;                /* slightly lighter */
+  --card:#1c2128;                /* card bg — clear distinction */
+  --border:#30363d;              /* visible border */
+  --border-l:#21262d;            /* subtle border */
 
-  /* Primary — Vibrant Purple */
-  --primary:#a78bfa;            /* violet */
-  --primary-l:#2a1f4d;          /* dark violet bg */
-  --primary-m:#8b5cf6;          /* medium violet */
-  --primary-d:#6d28d9;          /* deep violet */
+  /* Primary — Cyan classic */
+  --primary:#58a6ff;              /* bright cyan-blue */
+  --primary-l:#0d2847;            /* dark blue tint */
+  --primary-m:#388bfd;
+  --primary-d:#1f6feb;
 
-  /* Status colors */
-  --success:#4ade80;              /* green */
-  --success-l:#0f2e1c;            /* dark green bg */
-  --warning:#f59e0b;              /* orange */
-  --warning-l:#2e1a04;            /* dark orange bg */
-  --danger:#fb7185;               /* pink-red */
-  --danger-l:#2e0a1a;             /* dark red bg */
-  --hold:#a1a1aa;                 /* gray */
-  --hold-l:#1f1f25;               /* dark gray bg */
-  --info:#22d3ee;                 /* cyan */
-  --info-l:#0a2630;
+  /* Status — vivid, readable */
+  --success:#3fb950;              /* GitHub green */
+  --success-l:#0f2818;            /* dark green tint */
+  --warning:#d29922;              /* mustard */
+  --warning-l:#2e2308;            /* dark mustard tint */
+  --danger:#f85149;               /* red */
+  --danger-l:#2e0d0d;             /* dark red tint */
+  --hold:#8b949e;                 /* neutral gray */
+  --hold-l:#21262d;
+  --info:#79c0ff;                 /* light blue */
+  --info-l:#0d2847;
 
-  /* Text */
-  --text:#f5f3ff;                 /* near-white violet tint */
-  --text2:#d8d4f0;                /* light violet */
-  --text3:#a09cc4;                /* medium violet */
+  /* Text — high contrast */
+  --text:#f0f6fc;                 /* near white */
+  --text2:#c9d1d9;                /* light gray — readable */
+  --text3:#8b949e;                /* medium gray — secondary */
 
   --r:10px;--rsm:8px;
-  --sh:0 1px 3px rgba(0,0,0,.4),0 2px 10px rgba(109,40,217,.15);
-  --shlg:0 4px 16px rgba(0,0,0,.5),0 12px 32px rgba(109,40,217,.2);
+  --sh:0 1px 3px rgba(0,0,0,.5),0 2px 8px rgba(0,0,0,.4);
+  --shlg:0 4px 16px rgba(0,0,0,.6),0 12px 32px rgba(0,0,0,.5);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'IBM Plex Sans Thai','Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--text);font-size:14px;-webkit-font-smoothing:antialiased;background-image:radial-gradient(circle at 20% 10%,rgba(78,158,255,.05) 0,transparent 40%),radial-gradient(circle at 80% 90%,rgba(52,211,153,.04) 0,transparent 40%);background-attachment:fixed}
+body{font-family:'IBM Plex Sans Thai','Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--text);font-size:14px;-webkit-font-smoothing:antialiased;background-image:radial-gradient(circle at 20% 10%,rgba(88,166,255,.05) 0,transparent 40%),radial-gradient(circle at 80% 90%,rgba(63,185,80,.04) 0,transparent 40%);background-attachment:fixed}
 
 /* TOPBAR */
-.topbar{background:linear-gradient(135deg,#0a0f1e 0%,#1a2540 50%,#0d1930 100%);color:#e2e8f0;padding:0 20px;height:54px;display:flex;align-items:center;justify-content:space-between;gap:8px;box-shadow:0 4px 20px rgba(0,0,0,.5);border-bottom:1px solid #2a3550}
+.topbar{background:linear-gradient(135deg,#010409 0%,#161b22 50%,#0d1117 100%);color:#e2e8f0;padding:0 20px;height:54px;display:flex;align-items:center;justify-content:space-between;gap:8px;box-shadow:0 4px 20px rgba(0,0,0,.5);border-bottom:1px solid #30363d}
 .tb-l{display:flex;align-items:center;gap:10px}
 .tb-logo{width:30px;height:30px;background:rgba(255,255,255,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px}
 .tb-title{font-size:14px;font-weight:600}
@@ -67,7 +67,7 @@ body{font-family:'IBM Plex Sans Thai','Segoe UI',Tahoma,sans-serif;background:va
 .tbtn.sync-on{background:rgba(43,196,138,.3);border-color:rgba(43,196,138,.5)}
 
 /* ── INSIGHTS BOX ── base styles (mobile-first, desktop scales up) ──────── */
-.insights-box{background:linear-gradient(135deg,#1a2540,#0d1930);border-bottom:2px solid #2a3550;padding:14px 20px}
+.insights-box{background:linear-gradient(135deg,#161b22,#0d1117);border-bottom:2px solid #30363d;padding:14px 20px}
 
 /* Panel row: alert card + gauge card side by side */
 .ins-panels{display:flex;flex-direction:row;align-items:stretch;gap:14px;margin-bottom:12px}
@@ -717,7 +717,7 @@ main { padding: 12px 10px; }
   img[data-pp] { display: block !important; max-width: 100% !important; }
 
   /* ── Insights ── */
-  .insights-box { background: #1a2540 !important; padding: 8px 12px !important; }
+  .insights-box { background: #161b22 !important; padding: 8px 12px !important; }
   .ins-panels { flex-direction: row !important; }
   .ins-pills { grid-template-columns: repeat(6,1fr) !important; }
   /* donut: บังคับ square ไม่ให้บิดเป็นวงรี */
@@ -768,7 +768,7 @@ main { padding: 12px 10px; }
     <div>
       <div class="tb-title" style="font-size:15px;letter-spacing:.3px">
         SDA Migration Progress Dashboard -
-        <span style="background:linear-gradient(90deg,#4e9eff,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;font-size:17px;letter-spacing:.5px"> CNX</span>
+        <span style="background:linear-gradient(90deg,#58a6ff,#3fb950);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;font-size:17px;letter-spacing:.5px"> CNX</span>
       </div>
       <div class="tb-sub">ข้อมูลล่าสุด: <span id="tb-last-install">กำลังโหลด...</span></div>
     </div>
@@ -1328,7 +1328,7 @@ let DAILY_INF = []; // populated from API
 // Per-fabric daily installs
 let FAB_DAILY = {};
 // Fabric colors and totals for charts
-let FAB_COLORS = {'D1-041': '#4e9eff', 'CFZ': '#34d399', 'T1-015': '#fbbf24', 'D1-091': '#a78bfa', 'RFF': '#f472b6', 'AMF': '#fb923c', 'PPW': '#22d3ee'};
+let FAB_COLORS = {'D1-041': '#58a6ff', 'CFZ': '#3fb950', 'T1-015': '#d29922', 'D1-091': '#a371f7', 'RFF': '#f778ba', 'AMF': '#ff7b72', 'PPW': '#79c0ff'};
 let FAB_TOTALS = {}; // populated from API
 
 // Plan targets (scheduled qty) per date matching DAILY_L
@@ -1365,8 +1365,8 @@ function lineOpts(color, yMax=100, yLabel='%') {
       }
     },
     scales:{
-      x:{ticks:{font:{size:10},maxRotation:45,color:'#94a3b8'},grid:{display:false}},
-      y:{min:0,max:yMax,ticks:{font:{size:10},color:'#94a3b8',callback:v=>v+'%'},grid:{color:'#1f2d45'}}
+      x:{ticks:{font:{size:10},maxRotation:45,color:'#c9d1d9'},grid:{display:false}},
+      y:{min:0,max:yMax,ticks:{font:{size:10},color:'#c9d1d9',callback:v=>v+'%'},grid:{color:'#30363d'}}
     }
   };
 }
@@ -1398,7 +1398,7 @@ function makeLineChart(canvasId, planData, actData, planColor, actColor, planLab
     const xT=x0+(x1-x0)*getTodayFrac();
     cv.save();
     cv.beginPath();cv.moveTo(xT,top);cv.lineTo(xT,bottom);
-    cv.strokeStyle='#f87171';cv.lineWidth=1.2;cv.setLineDash([4,3]);cv.stroke();
+    cv.strokeStyle='#f85149';cv.lineWidth=1.2;cv.setLineDash([4,3]);cv.stroke();
     cv.setLineDash([]);cv.restore();
   }};
 
@@ -1414,7 +1414,7 @@ function makeLineChart(canvasId, planData, actData, planColor, actColor, planLab
         if(i!==lastIdx && i%3!==0) return;
         ctx2.save();
         ctx2.font='9px Segoe UI';
-        ctx2.fillStyle=isPlan?'#94a3b8':((actColor||'#4e9eff')+'99');
+        ctx2.fillStyle=isPlan?'#94a3b8':((actColor||'#58a6ff')+'99');
         ctx2.textAlign='center';
         ctx2.textBaseline=isPlan?'bottom':'top';
         ctx2.fillText(v.toFixed(1)+'%', pt.x, isPlan?pt.y-4:pt.y+4);
@@ -1429,10 +1429,10 @@ function makeLineChart(canvasId, planData, actData, planColor, actColor, planLab
     data:{
       labels: WK,
       datasets:[
-        {label:planLabel||'แผน',data:planData,borderColor:planColor||'#94a3b8',borderWidth:2,borderDash:[5,3],pointRadius:3,pointBackgroundColor:planColor||'#94a3b8',tension:0.3,fill:false,spanGaps:false},
-        {label:actLabel||'จริง',data:actFull,borderColor:actColor||'#4e9eff',borderWidth:2.5,
+        {label:planLabel||'แผน',data:planData,borderColor:planColor||'#8b949e',borderWidth:2,borderDash:[5,3],pointRadius:3,pointBackgroundColor:planColor||'#8b949e',tension:0.3,fill:false,spanGaps:false},
+        {label:actLabel||'จริง',data:actFull,borderColor:actColor||'#58a6ff',borderWidth:2.5,
          pointRadius:(c)=>c.parsed.y!=null?4:0,
-         pointBackgroundColor:actColor||'#4e9eff',tension:0.3,fill:false,spanGaps:false}
+         pointBackgroundColor:actColor||'#58a6ff',tension:0.3,fill:false,spanGaps:false}
       ]
     },
     options:{...lineOpts(actColor),layout:{padding:{top:18,bottom:12}}}
@@ -1685,7 +1685,7 @@ function buildVelocityChart(){
             callback(val,i){ return [sliceLabels[i], sliceDateLabels[i]]; }
           }
         },
-        y:{grid:{color:'#1f2d45'},ticks:{font:{size:10}},min:0}
+        y:{grid:{color:'#30363d'},ticks:{font:{size:10}},min:0}
       }
     }
   });
@@ -1780,7 +1780,7 @@ function buildFabGap(){
         }
       },
       scales:{
-        x:{ticks:{font:{size:10}},grid:{color:'#1f2d45'},min:0},
+        x:{ticks:{font:{size:10}},grid:{color:'#30363d'},min:0},
         y:{ticks:{font:{size:11},color:'#3d2817'},grid:{display:false}}
       }
     }
@@ -1881,7 +1881,7 @@ function buildWeekdayChart(){
       },
       scales:{
         x:{stacked:true, grid:{display:false}, ticks:{font:{size:10},color:'#3d2817'}},
-        y:{stacked:true, grid:{color:'#1f2d45'}, ticks:{font:{size:10}}, min:0}
+        y:{stacked:true, grid:{color:'#30363d'}, ticks:{font:{size:10}}, min:0}
       }
     }
   });
@@ -1954,7 +1954,7 @@ function buildBurndown(){
     const x=chart.getDatasetMeta(0).data[tIdx].x;
     ctx.save();
     ctx.beginPath();ctx.moveTo(x,top);ctx.lineTo(x,bottom);
-    ctx.strokeStyle='#f87171';ctx.lineWidth=1.5;ctx.setLineDash([5,3]);ctx.stroke();
+    ctx.strokeStyle='#f85149';ctx.lineWidth=1.5;ctx.setLineDash([5,3]);ctx.stroke();
     ctx.setLineDash([]);
     ctx.font='bold 10px Segoe UI,sans-serif';
     const tw=ctx.measureText(todayLbl).width;
@@ -1991,10 +1991,10 @@ function buildBurndown(){
         }
       },
       scales:{
-        x:{ticks:{font:{size:9},maxRotation:45,color:'#94a3b8',
+        x:{ticks:{font:{size:9},maxRotation:45,color:'#c9d1d9',
              callback:(v,i)=>i%tickStep===0?_labels[i]:null},grid:{display:false}},
-        y:{min:0,suggestedMax:window.TOTAL_CNX||252,ticks:{font:{size:10},color:'#94a3b8',
-             callback:v=>v.toLocaleString()},grid:{color:'#1f2d45'}}
+        y:{min:0,suggestedMax:window.TOTAL_CNX||252,ticks:{font:{size:10},color:'#c9d1d9',
+             callback:v=>v.toLocaleString()},grid:{color:'#30363d'}}
       }
     }
   });
@@ -2100,7 +2100,7 @@ function buildDailyChart(canvasId, labels, planData, actData, planColor, actColo
     const x=chart.getDatasetMeta(0).data[tIdx].x;
     cv.save();
     cv.beginPath();cv.moveTo(x,top);cv.lineTo(x,bottom);
-    cv.strokeStyle='#f87171';cv.lineWidth=1.5;cv.setLineDash([5,3]);cv.stroke();
+    cv.strokeStyle='#f85149';cv.lineWidth=1.5;cv.setLineDash([5,3]);cv.stroke();
     cv.setLineDash([]);
     // pill วันที่
     cv.font='bold 9px Segoe UI,sans-serif';
@@ -2126,7 +2126,7 @@ function buildDailyChart(canvasId, labels, planData, actData, planColor, actColo
       const isPlan=di===0;
       ctx2.save();
       ctx2.font='bold 9px Segoe UI';
-      ctx2.fillStyle=isPlan?(planColor||'#9c8a74'):(actColor||'#4e9eff');
+      ctx2.fillStyle=isPlan?(planColor||'#9c8a74'):(actColor||'#58a6ff');
       ctx2.textAlign='left';
       ctx2.textBaseline=isPlan?'bottom':'top';
       const suffix=yUnit==='%'?'%':' เครื่อง';
@@ -2136,7 +2136,7 @@ function buildDailyChart(canvasId, labels, planData, actData, planColor, actColo
   }};
 
   // actColor with opacity สำหรับ fill (robust — handle any color format)
-  const _hex6 = (actColor||'#4e9eff').replace('#','').slice(0,6);
+  const _hex6 = (actColor||'#58a6ff').replace('#','').slice(0,6);
   const _r=parseInt(_hex6.slice(0,2),16)||67, _g=parseInt(_hex6.slice(2,4),16)||97, _b=parseInt(_hex6.slice(4,6),16)||238;
   const fillBg = `rgba(${_r},${_g},${_b},0.06)`;
 
@@ -2150,9 +2150,9 @@ function buildDailyChart(canvasId, labels, planData, actData, planColor, actColo
          pointRadius:(c)=>c.dataIndex===lastActIdx?3:0,
          pointBackgroundColor:planColor||'#9c8a74',
          tension:0.3,fill:false,spanGaps:true},
-        {label:'จริง',data:actData,borderColor:actColor||'#4e9eff',borderWidth:2.5,
+        {label:'จริง',data:actData,borderColor:actColor||'#58a6ff',borderWidth:2.5,
          pointRadius:(c)=>c.dataIndex===lastActIdx?3:0,
-         pointBackgroundColor:actColor||'#4e9eff',tension:0.3,
+         pointBackgroundColor:actColor||'#58a6ff',tension:0.3,
          fill:true,backgroundColor:fillBg,spanGaps:false},
       ]
     },
@@ -2174,13 +2174,13 @@ function buildDailyChart(canvasId, labels, planData, actData, planColor, actColo
         }
       },
       scales:{
-        x:{ticks:{font:{size:9},maxRotation:45,color:'#94a3b8',
+        x:{ticks:{font:{size:9},maxRotation:45,color:'#c9d1d9',
              callback:(v,i)=>i%tickStep===0?labels[i]:null},
            grid:{display:false}},
         y:{min:0,max:yMax||100,
-           ticks:{font:{size:10},color:'#94a3b8',stepSize:yUnit==='%'?10:undefined,
+           ticks:{font:{size:10},color:'#c9d1d9',stepSize:yUnit==='%'?10:undefined,
              callback:v=>yUnit==='%'?v+'%':v.toLocaleString()},
-           grid:{color:'#1f2d45'}}
+           grid:{color:'#30363d'}}
       }
     }
   });
@@ -2216,7 +2216,7 @@ function buildProgressCharts(){
       const x=chart.getDatasetMeta(0).data[tIdx].x;
       cv.save();
       cv.beginPath();cv.moveTo(x,top);cv.lineTo(x,bottom);
-      cv.strokeStyle='#f87171';cv.lineWidth=1.5;cv.setLineDash([5,3]);cv.stroke();
+      cv.strokeStyle='#f85149';cv.lineWidth=1.5;cv.setLineDash([5,3]);cv.stroke();
       cv.setLineDash([]);
       cv.font='bold 10px Segoe UI,sans-serif';
       const tw=cv.measureText(todayLbl).width;
@@ -2279,11 +2279,11 @@ function buildProgressCharts(){
           }
         },
         scales:{
-          x:{ticks:{font:{size:9},maxRotation:45,color:'#94a3b8',
+          x:{ticks:{font:{size:9},maxRotation:45,color:'#c9d1d9',
                callback:(v,i)=>useDaily?(i%7===0?_pLabels[i]:null):_pLabels[i]},
              grid:{display:false}},
-          y:{min:0,max:100,ticks:{font:{size:10},color:'#94a3b8',stepSize:10,callback:v=>v+'%'},
-             grid:{color:'#1f2d45'}}
+          y:{min:0,max:100,ticks:{font:{size:10},color:'#c9d1d9',stepSize:10,callback:v=>v+'%'},
+             grid:{color:'#30363d'}}
         }
       }
     });
@@ -2396,7 +2396,7 @@ function buildProgressCharts(){
         const x=chart.getDatasetMeta(0).data[tIdx].x;
         cv3.save();
         cv3.beginPath();cv3.moveTo(x,top);cv3.lineTo(x,bottom);
-        cv3.strokeStyle='#f87171';cv3.lineWidth=1.2;cv3.setLineDash([4,3]);cv3.stroke();
+        cv3.strokeStyle='#f85149';cv3.lineWidth=1.2;cv3.setLineDash([4,3]);cv3.stroke();
         cv3.setLineDash([]);
         cv3.font='bold 9px Segoe UI,sans-serif';
         const tw=cv3.measureText(_tod).width;
@@ -2478,9 +2478,9 @@ function buildProgressCharts(){
             }
           },
           scales:{
-            x:{ticks:{font:{size:9},maxRotation:45,color:'#94a3b8',
+            x:{ticks:{font:{size:9},maxRotation:45,color:'#c9d1d9',
                  callback:(v,i)=>i%7===0?DAILY_PROG_LABELS[i]:null},grid:{display:false}},
-            y:{min:0,max:100,ticks:{font:{size:10},color:'#94a3b8',stepSize:10,callback:v=>v+'%'},grid:{color:'#1f2d45'}}
+            y:{min:0,max:100,ticks:{font:{size:10},color:'#c9d1d9',stepSize:10,callback:v=>v+'%'},grid:{color:'#30363d'}}
           }
         }
       });
@@ -2533,10 +2533,10 @@ function buildOneFabChart(fab) {
         }
       },
       scales:{
-        x:{stacked:true, ticks:{font:{size:9},maxRotation:45,color:'#94a3b8',
+        x:{stacked:true, ticks:{font:{size:9},maxRotation:45,color:'#c9d1d9',
              autoSkip:true, maxTicksLimit:8}, grid:{display:false}},
-        y:{stacked:true, min:0, ticks:{font:{size:9},color:'#94a3b8',callback:v=>v||''},
-             grid:{color:'#1f2d45'}}
+        y:{stacked:true, min:0, ticks:{font:{size:9},color:'#c9d1d9',callback:v=>v||''},
+             grid:{color:'#30363d'}}
       }
     }
   });
@@ -2600,7 +2600,7 @@ function buildGraphs(){
       }
     },
     scales:{
-      y:{max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'#1f2d45'}},
+      y:{max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'#30363d'}},
       x:{ticks:{font:{size:10}},grid:{display:false}}
     }
   }
@@ -2626,7 +2626,7 @@ function buildGraphs(){
         plugins:{legend:{position:'bottom',labels:{font:{size:10},boxWidth:10}},
           tooltip:{backgroundColor:'rgba(30,45,77,.92)',titleColor:'#fff',bodyColor:'rgba(255,255,255,.8)',padding:10,cornerRadius:8,
             callbacks:{footer:items=>`รวม: ${items.reduce((a,c)=>a+c.parsed.y,0)} เครื่อง`}}},
-        scales:{y:{ticks:{font:{size:10}},grid:{color:'#1f2d45'}},x:{ticks:{font:{size:10}},grid:{display:false}}}
+        scales:{y:{ticks:{font:{size:10}},grid:{color:'#30363d'}},x:{ticks:{font:{size:10}},grid:{display:false}}}
       }
     });
   }
@@ -2652,7 +2652,7 @@ function buildGraphs(){
         const x=chart.getDatasetMeta(0).data[tIdx].x;
         cv2.save();
         cv2.beginPath();cv2.moveTo(x,top);cv2.lineTo(x,bottom);
-        cv2.strokeStyle='#f87171';cv2.lineWidth=1.5;cv2.setLineDash([5,3]);cv2.stroke();
+        cv2.strokeStyle='#f85149';cv2.lineWidth=1.5;cv2.setLineDash([5,3]);cv2.stroke();
         cv2.setLineDash([]);
         cv2.font='bold 9px Segoe UI';
         const tw2=cv2.measureText(_todayL).width;
@@ -2700,8 +2700,8 @@ function buildGraphs(){
             }
           },
           scales:{
-            y:{ticks:{font:{size:10}},grid:{color:'#1f2d45'}},
-            x:{ticks:{font:{size:8},maxRotation:45,color:'#94a3b8',
+            y:{ticks:{font:{size:10}},grid:{color:'#30363d'}},
+            x:{ticks:{font:{size:8},maxRotation:45,color:'#c9d1d9',
                 callback:(v,i)=>i%7===0?DAILY_L[i]:null},grid:{display:false}}
           }
         }
@@ -2709,7 +2709,7 @@ function buildGraphs(){
     }
   }
   const tl=[['อาคารสนง.',38],['Concourse D',33],['Concourse A',85],['AIMS',16],['Concourse C',69],['CFZ BFZ',100],['Concourse G',0],['AMF1',4]];
-  if(document.getElementById('loc-bar-c')) new Chart(document.getElementById('loc-bar-c'),{type:'bar',data:{labels:tl.map(l=>l[0]),datasets:[{data:tl.map(l=>l[1]),backgroundColor:tl.map(l=>l[1]>=80?'#7a8f4c':l[1]>=30?'#c08a2e':'#b8593a'),borderRadius:5}]},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(30,45,77,.92)',titleColor:'#fff',bodyColor:'rgba(255,255,255,.8)',padding:10,cornerRadius:8,callbacks:{label:(c)=>` ${c.parsed.y}%`}}},scales:{y:{max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'#1f2d45'}},x:{ticks:{font:{size:9},maxRotation:45},grid:{display:false}}}}});
+  if(document.getElementById('loc-bar-c')) new Chart(document.getElementById('loc-bar-c'),{type:'bar',data:{labels:tl.map(l=>l[0]),datasets:[{data:tl.map(l=>l[1]),backgroundColor:tl.map(l=>l[1]>=80?'#7a8f4c':l[1]>=30?'#c08a2e':'#b8593a'),borderRadius:5}]},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(30,45,77,.92)',titleColor:'#fff',bodyColor:'rgba(255,255,255,.8)',padding:10,cornerRadius:8,callbacks:{label:(c)=>` ${c.parsed.y}%`}}},scales:{y:{max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'#30363d'}},x:{ticks:{font:{size:9},maxRotation:45},grid:{display:false}}}}});
   if(document.getElementById('wd-cells') && DAILY_L.length){
     // ผลรวมแยกตามวันในสัปดาห์ (จ,อ,พ,พฤ,ศ,ส,อา) ตั้งแต่เริ่มต้นจนปัจจุบัน
     const _dowNames=['อา.','จ.','อ.','พ.','พฤ.','ศ.','ส.'];
@@ -2797,8 +2797,8 @@ function buildGraphs(){
         datalabels: false,
       },
       scales:{
-        x:{stacked:true,ticks:{font:{size:11},color:'#94a3b8',maxRotation:45},grid:{display:false}},
-        y:{stacked:true,min:0,ticks:{font:{size:10},color:'#94a3b8',callback:v=>v+' เครื่อง'},grid:{color:'#1f2d45'}}
+        x:{stacked:true,ticks:{font:{size:11},color:'#c9d1d9',maxRotation:45},grid:{display:false}},
+        y:{stacked:true,min:0,ticks:{font:{size:10},color:'#c9d1d9',callback:v=>v+' เครื่อง'},grid:{color:'#30363d'}}
       }
     },
     plugins:[{
