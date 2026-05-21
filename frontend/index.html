@@ -12,39 +12,39 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* Midnight Dark Theme — deep navy slate */
-  --bg:#0f1117;                /* near black */
-  --bg-2:#161b27;              /* dark navy */
-  --card:#1a2035;              /* card dark */
-  --border:#2a3550;            /* border slate */
-  --border-l:#1f2d45;          /* lighter border */
+  /* Indigo-Purple Dark Theme */
+  --bg:#13111c;                /* deep purple-black */
+  --bg-2:#1c1830;              /* dark indigo */
+  --card:#252140;              /* indigo card */
+  --border:#3d3560;            /* purple border */
+  --border-l:#322c50;          /* lighter border */
 
-  /* Primary — Electric Blue */
-  --primary:#4e9eff;            /* vivid blue */
-  --primary-l:#0d2040;          /* dark blue bg */
-  --primary-m:#2d7dd2;          /* medium blue */
-  --primary-d:#1a5bb0;          /* deep blue */
+  /* Primary — Vibrant Purple */
+  --primary:#a78bfa;            /* violet */
+  --primary-l:#2a1f4d;          /* dark violet bg */
+  --primary-m:#8b5cf6;          /* medium violet */
+  --primary-d:#6d28d9;          /* deep violet */
 
   /* Status colors */
-  --success:#34d399;              /* emerald */
-  --success-l:#0a2e20;            /* dark emerald bg */
-  --warning:#fbbf24;              /* amber */
-  --warning-l:#2e1f04;            /* dark amber bg */
-  --danger:#f87171;               /* red */
-  --danger-l:#2e0e0e;             /* dark red bg */
-  --hold:#94a3b8;                 /* slate gray */
-  --hold-l:#1e293b;               /* dark slate bg */
-  --info:#60a5fa;                 /* sky blue */
-  --info-l:#0c1f3d;
+  --success:#4ade80;              /* green */
+  --success-l:#0f2e1c;            /* dark green bg */
+  --warning:#f59e0b;              /* orange */
+  --warning-l:#2e1a04;            /* dark orange bg */
+  --danger:#fb7185;               /* pink-red */
+  --danger-l:#2e0a1a;             /* dark red bg */
+  --hold:#a1a1aa;                 /* gray */
+  --hold-l:#1f1f25;               /* dark gray bg */
+  --info:#22d3ee;                 /* cyan */
+  --info-l:#0a2630;
 
   /* Text */
-  --text:#f1f5f9;                 /* near-white */
-  --text2:#cbd5e1;                /* light slate */
-  --text3:#94a3b8;                /* medium slate */
+  --text:#f5f3ff;                 /* near-white violet tint */
+  --text2:#d8d4f0;                /* light violet */
+  --text3:#a09cc4;                /* medium violet */
 
   --r:10px;--rsm:8px;
-  --sh:0 1px 3px rgba(0,0,0,.4),0 2px 10px rgba(0,0,0,.3);
-  --shlg:0 4px 16px rgba(0,0,0,.5),0 12px 32px rgba(0,0,0,.4);
+  --sh:0 1px 3px rgba(0,0,0,.4),0 2px 10px rgba(109,40,217,.15);
+  --shlg:0 4px 16px rgba(0,0,0,.5),0 12px 32px rgba(109,40,217,.2);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'IBM Plex Sans Thai','Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--text);font-size:14px;-webkit-font-smoothing:antialiased;background-image:radial-gradient(circle at 20% 10%,rgba(78,158,255,.05) 0,transparent 40%),radial-gradient(circle at 80% 90%,rgba(52,211,153,.04) 0,transparent 40%);background-attachment:fixed}
@@ -67,18 +67,18 @@ body{font-family:'IBM Plex Sans Thai','Segoe UI',Tahoma,sans-serif;background:va
 .tbtn.sync-on{background:rgba(43,196,138,.3);border-color:rgba(43,196,138,.5)}
 
 /* ── INSIGHTS BOX ── base styles (mobile-first, desktop scales up) ──────── */
-.insights-box{background:linear-gradient(135deg,#fffbeb,#fff7e0);border-bottom:2px solid #fcd34d;padding:14px 20px}
+.insights-box{background:linear-gradient(135deg,#1a2540,#0d1930);border-bottom:2px solid #2a3550;padding:14px 20px}
 
 /* Panel row: alert card + gauge card side by side */
 .ins-panels{display:flex;flex-direction:row;align-items:stretch;gap:14px;margin-bottom:12px}
 
 /* LEFT: alert card */
-.ins-alert-card{flex:1;min-width:0;background:#fff;border:1px solid #fed7aa;border-left:4px solid var(--danger);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.ins-alert-card{flex:1;min-width:0;background:var(--card);border:1px solid #fed7aa;border-left:4px solid var(--danger);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
 .ins-alert-head{display:flex;align-items:flex-start;gap:10px}
 .ins-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#c08a2e,#ff6b35);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;box-shadow:0 3px 10px rgba(255,159,67,.35)}
 .ins-big{font-size:15px;font-weight:700;color:#b45309;line-height:1.3}
 .ins-big em{font-size:22px;font-style:normal;color:#c08a2e;margin-right:2px}
-.ins-pct-tag{font-size:11px;font-weight:500;color:#8f3f26;background:#fff7ed;padding:2px 8px;border-radius:99px;margin-left:4px;white-space:nowrap}
+.ins-pct-tag{font-size:11px;font-weight:500;color:var(--primary);background:rgba(78,158,255,0.15);padding:2px 8px;border-radius:99px;margin-left:4px;white-space:nowrap}
 .ins-rate-row{display:flex;align-items:center;gap:8px;background:#faf6ef;border-radius:8px;padding:8px 12px;flex-wrap:wrap}
 .ins-rate-lbl{font-size:12px;color:var(--text2)}
 .ins-rate-val{font-size:18px;font-weight:700;color:var(--text)}
@@ -88,7 +88,7 @@ body{font-family:'IBM Plex Sans Thai','Segoe UI',Tahoma,sans-serif;background:va
 .ins-warn{font-size:12px;color:var(--danger);font-weight:500;display:flex;align-items:center;gap:4px}
 
 /* RIGHT: gauge card */
-.ins-gauge-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 20px;display:flex;align-items:center;gap:20px;flex-shrink:0;min-width:230px}
+.ins-gauge-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 20px;display:flex;align-items:center;gap:20px;flex-shrink:0;min-width:230px}
 .ins-gauge-section{flex-shrink:0}
 .ins-gauge-wrap{position:relative;width:90px;height:90px}
 .ins-gauge-wrap canvas{position:absolute;inset:0;width:90px!important;height:90px!important}
@@ -104,7 +104,7 @@ body{font-family:'IBM Plex Sans Thai','Segoe UI',Tahoma,sans-serif;background:va
 
 /* PILLS: 6-col grid row */
 .ins-pills{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;border-top:1px solid rgba(253,211,77,.5);padding-top:10px}
-.ins-pill{background:#fff;border:1px solid var(--border);border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:8px;transition:.2s;cursor:default}
+.ins-pill{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:8px;transition:.2s;cursor:default}
 .ins-pill:hover{border-color:var(--primary-m);box-shadow:0 2px 8px rgba(67,97,238,.1)}
 .ip-icon{font-size:16px;flex-shrink:0;width:24px;text-align:center;line-height:1}
 .ip-body{display:flex;flex-direction:column;gap:1px;min-width:0}
@@ -126,13 +126,13 @@ main{max-width:1360px;margin:0 auto;padding:18px 14px}
 .sic{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px}
 .sec-ts{font-size:11px;color:var(--text3);font-weight:400}
 .actions{display:flex;gap:7px}
-.btn{padding:7px 13px;border:1px solid var(--border);border-radius:8px;background:#fff;font-size:12px;cursor:pointer;color:var(--text);display:flex;align-items:center;gap:4px;font-family:inherit;transition:.2s;box-shadow:var(--sh)}
+.btn{padding:7px 13px;border:1px solid var(--border);border-radius:8px;background:var(--card);font-size:12px;cursor:pointer;color:var(--text);display:flex;align-items:center;gap:4px;font-family:inherit;transition:.2s;box-shadow:var(--sh)}
 .btn:hover{border-color:var(--primary-m);background:var(--primary-l);color:var(--primary)}
 .btn.primary{background:var(--primary);color:#fff;border-color:var(--primary)}
-.btn.sync-on{background:var(--success-l);border-color:#a7f3d0;color:#556b35}
+.btn.sync-on{background:var(--success-l);border-color:rgba(52,211,153,0.3);color:var(--success)}
 
 /* TABS */
-.tabs-wrap{background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--border);overflow:hidden}
+.tabs-wrap{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--border);overflow:hidden}
 .tabs{display:flex;border-bottom:1px solid var(--border);padding:0 4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
 .tab{padding:12px 16px;border:none;background:none;font-size:13px;font-weight:500;cursor:pointer;color:var(--text2);border-bottom:3px solid transparent;font-family:inherit;transition:.2s}
 .tab:hover{color:var(--primary)}
@@ -148,7 +148,7 @@ main{max-width:1360px;margin:0 auto;padding:18px 14px}
 .chi{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px}
 
 /* SUMMARY CARDS */
-.scard{border-radius:var(--rsm);padding:15px 16px;border:1px solid var(--border);background:#fff;box-shadow:var(--sh);position:relative;overflow:hidden}
+.scard{border-radius:var(--rsm);padding:15px 16px;border:1px solid var(--border);background:var(--card);box-shadow:var(--sh);position:relative;overflow:hidden}
 .scard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
 .scard.all::before{background:linear-gradient(90deg,var(--primary),var(--primary-m))}
 .scard.sw::before{background:linear-gradient(90deg,#b8593a,#d98967)}
@@ -196,8 +196,8 @@ main{max-width:1360px;margin:0 auto;padding:18px 14px}
 .hmc .hmp{font-size:24px;font-weight:700;line-height:1}
 .hmc .hms{font-size:10px;margin-top:3px}
 .hm0{background:#f5f7fa;color:var(--text3);border-color:#e8dcc7}
-.hmlo{background:#fff8e6;color:#8f3f26}
-.hmmi{background:#fff2e6;color:#b8593a}
+.hmlo{background:rgba(251,191,36,0.15);color:#fbbf24}
+.hmmi{background:rgba(78,158,255,0.15);color:#4e9eff}
 .hmhi{background:#ecfdf5;color:#556b35}
 .hmfu{background:linear-gradient(135deg,#7a8f4c,#0e9e73);color:#fff}
 
@@ -209,14 +209,14 @@ main{max-width:1360px;margin:0 auto;padding:18px 14px}
 
 /* BADGES */
 .badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:11px;font-weight:600}
-.bs{background:var(--success-l);color:#556b35}
+.bs{background:var(--success-l);color:var(--success)}
 .bon{background:var(--primary-l);color:var(--primary)}
 .bho{background:var(--hold-l);color:var(--hold)}
 .bpe{background:#f5ede0;color:var(--text2)}
 
 /* TABLE */
 .filters{display:flex;gap:7px;margin-bottom:10px;flex-wrap:wrap}
-.filters select,.filters input{padding:7px 10px;border:1px solid var(--border);border-radius:7px;font-size:12px;font-family:inherit;background:#fff;color:var(--text);outline:none}
+.filters select,.filters input{padding:7px 10px;border:1px solid var(--border);border-radius:7px;font-size:12px;font-family:inherit;background:var(--card);color:var(--text);outline:none}
 .tblw{overflow-x:auto;border-radius:var(--rsm);border:1px solid var(--border)}
 table{width:100%;border-collapse:collapse;font-size:12px}
 th{background:#faf6ef;padding:9px 11px;text-align:left;border-bottom:1px solid var(--border);color:var(--text2);font-size:11px;text-transform:uppercase;font-weight:600;white-space:nowrap}
@@ -224,15 +224,15 @@ td{padding:8px 11px;border-bottom:1px solid var(--border)}
 tr:last-child td{border-bottom:none}
 tr:hover td{background:#faf6ef}
 .pager{display:flex;align-items:center;justify-content:space-between;padding:10px 0 0;font-size:12px;color:var(--text2)}
-.pager button{padding:5px 12px;border:1px solid var(--border);border-radius:7px;background:#fff;cursor:pointer;font-size:12px;font-family:inherit;transition:.2s}
+.pager button{padding:5px 12px;border:1px solid var(--border);border-radius:7px;background:var(--card);cursor:pointer;font-size:12px;font-family:inherit;transition:.2s}
 .pager button:hover:not(:disabled){background:var(--primary-l);border-color:var(--primary-m);color:var(--primary)}
 .pager button:disabled{opacity:.4;cursor:not-allowed}
 
 /* LOCATION */
 .loc-sec-h{background:linear-gradient(90deg,var(--primary-l),var(--bg));border-radius:var(--rsm);padding:9px 13px;display:flex;align-items:center;gap:7px;margin-bottom:11px;font-size:13px;font-weight:600;color:var(--primary)}
 .fg{margin-bottom:10px}
-.fgh{display:flex;align-items:center;justify-content:space-between;padding:10px 13px;background:var(--primary-l);border-radius:var(--rsm);cursor:pointer;font-size:13px;font-weight:600;color:var(--primary);border:1px solid #c7d2fe;user-select:none}
-.fgb{display:none;margin-top:3px;background:#fff;border-radius:var(--rsm);border:1px solid var(--border);overflow:hidden}
+.fgh{display:flex;align-items:center;justify-content:space-between;padding:10px 13px;background:var(--primary-l);border-radius:var(--rsm);cursor:pointer;font-size:13px;font-weight:600;color:var(--primary);border:1px solid var(--border);user-select:none}
+.fgb{display:none;margin-top:3px;background:var(--card);border-radius:var(--rsm);border:1px solid var(--border);overflow:hidden}
 .fgb.open{display:block}
 .locrow{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--border);gap:10px;transition:.2s;border-radius:6px;margin:2px 4px}
 .locrow:last-child{border-bottom:none}
@@ -244,11 +244,11 @@ tr:hover td{background:#faf6ef}
 .locfill{height:100%;border-radius:99px}
 
 /* PLAN */
-.pcard{background:#fff;border:1px solid var(--border);border-radius:var(--rsm);padding:13px}
+.pcard{background:var(--card);border:1px solid var(--border);border-radius:var(--rsm);padding:13px}
 .pcard .pc-l{font-size:11px;color:var(--text2);margin-bottom:3px}
 .pcard .pc-v{font-size:15px;font-weight:700}
 .pcard .pc-v.red{color:var(--danger)} .pcard .pc-v.grn{color:var(--success)}
-.fpc{background:#fff;border:1px solid var(--border);border-radius:var(--rsm);padding:15px;margin-bottom:9px}
+.fpc{background:var(--card);border:1px solid var(--border);border-radius:var(--rsm);padding:15px;margin-bottom:9px}
 .fpc-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px}
 .fpc-name{font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}
 .fpc-pct{font-size:16px;font-weight:700;padding:3px 10px;border-radius:99px}
@@ -276,12 +276,12 @@ tr:hover td{background:#faf6ef}
 .fg2{display:grid;grid-template-columns:1fr 1fr;gap:11px}
 .fgr{display:flex;flex-direction:column;gap:4px;margin-bottom:11px}
 .fgr label{font-size:12px;font-weight:600;color:var(--text2)}
-.fgr input,.fgr select,.fgr textarea{padding:8px 11px;border:1px solid var(--border);border-radius:7px;font-size:13px;font-family:inherit;color:var(--text);background:#fff;outline:none;transition:.2s}
+.fgr input,.fgr select,.fgr textarea{padding:8px 11px;border:1px solid var(--border);border-radius:7px;font-size:13px;font-family:inherit;color:var(--text);background:var(--card);outline:none;transition:.2s}
 .fgr input:focus,.fgr select:focus,.fgr textarea:focus{border-color:var(--primary-m)}
 .fgr textarea{height:65px;resize:vertical}
 .falert{padding:9px 13px;border-radius:7px;font-size:13px;margin-bottom:11px;display:flex;align-items:center;gap:7px}
-.fok{background:var(--success-l);color:#556b35;border:1px solid #a7f3d0}
-.ferr{background:var(--danger-l);color:#991b1b;border:1px solid #fecaca}
+.fok{background:var(--success-l);color:var(--success);border:1px solid rgba(52,211,153,0.3)}
+.ferr{background:var(--danger-l);color:var(--danger);border:1px solid rgba(248,113,113,0.3)}
 .loading{text-align:center;padding:30px;color:var(--text2)}
 
 
@@ -717,7 +717,7 @@ main { padding: 12px 10px; }
   img[data-pp] { display: block !important; max-width: 100% !important; }
 
   /* ── Insights ── */
-  .insights-box { background: #fffbeb !important; padding: 8px 12px !important; }
+  .insights-box { background: #1a2540 !important; padding: 8px 12px !important; }
   .ins-panels { flex-direction: row !important; }
   .ins-pills { grid-template-columns: repeat(6,1fr) !important; }
   /* donut: บังคับ square ไม่ให้บิดเป็นวงรี */
@@ -925,7 +925,7 @@ main { padding: 12px 10px; }
   <div class="actions">
     <button class="btn" id="desk-sync-btn" onclick="toggleAutoSync()">🔄 เปิดซิงค์อัตโนมัติ</button>
     <button class="btn" onclick="manualRefresh()">↺ รีเฟรชข้อมูล</button>
-    <button class="btn" style="background:#fff5f5;border-color:#ffd0d0;color:var(--danger)" onclick="exportPDF()">⬇ PDF</button>
+    <button class="btn" style="background:rgba(248,113,113,0.15);border-color:rgba(248,113,113,0.3);color:var(--danger)" onclick="exportPDF()">⬇ PDF</button>
   </div>
 </div>
 
@@ -942,9 +942,9 @@ main { padding: 12px 10px; }
 <div class="tab-body" id="tab-overview">
   <div class="g4" style="margin-bottom:14px">
     <div class="scard all"><div class="sl" style="color:var(--primary)">🏗 สรุปผลการติดตั้งทั้งหมด</div><div class="sn" id="ov-all">–/–</div><div class="ss">อุปกรณ์ที่ติดตั้งแล้ว (<span id="ov-all-pct">–</span>)</div><div class="sbar"><div class="sf" id="ov-all-b" style="width:0%"></div></div><div class="sbadge" style="background:var(--primary-l);color:var(--primary)" id="ov-all-badge">–</div></div>
-    <div class="scard sw"><div class="sl" style="color:#b8593a">🔀 Switch</div><div class="sn" id="ov-sw">–/–</div><div class="ss">Switch ที่ติดตั้งแล้ว (<span id="ov-sw-pct">–</span>)</div><div class="sbar"><div class="sf" id="ov-sw-b" style="width:0%"></div></div><div class="sbadge" style="background:var(--primary-l);color:#b8593a" id="ov-sw-badge">–</div></div>
-    <div class="scard ap"><div class="sl" style="color:#556b35">📶 AP</div><div class="sn" id="ov-ap">–/–</div><div class="ss">AP ที่ติดตั้งแล้ว (<span id="ov-ap-pct">–</span>)</div><div class="sbar"><div class="sf" id="ov-ap-b" style="width:0%"></div></div><div class="sbadge" style="background:var(--success-l);color:#556b35" id="ov-ap-badge">–</div></div>
-    <div class="scard inf"><div class="sl" style="color:#8f3f26">⚡ Infra</div><div class="sn" id="ov-inf">–/–</div><div class="ss">Infra ที่ติดตั้งแล้ว (<span id="ov-inf-pct">–</span>)</div><div class="sbar"><div class="sf" id="ov-inf-b" style="width:0%"></div></div><div class="sbadge" style="background:var(--warning-l);color:#8f3f26" id="ov-inf-badge">–</div></div>
+    <div class="scard sw"><div class="sl" style="color:var(--primary)">🔀 Switch</div><div class="sn" id="ov-sw">–/–</div><div class="ss">Switch ที่ติดตั้งแล้ว (<span id="ov-sw-pct">–</span>)</div><div class="sbar"><div class="sf" id="ov-sw-b" style="width:0%"></div></div><div class="sbadge" style="background:var(--primary-l);color:var(--primary)" id="ov-sw-badge">–</div></div>
+    <div class="scard ap"><div class="sl" style="color:var(--success)">📶 AP</div><div class="sn" id="ov-ap">–/–</div><div class="ss">AP ที่ติดตั้งแล้ว (<span id="ov-ap-pct">–</span>)</div><div class="sbar"><div class="sf" id="ov-ap-b" style="width:0%"></div></div><div class="sbadge" style="background:var(--success-l);color:var(--success)" id="ov-ap-badge">–</div></div>
+    <div class="scard inf"><div class="sl" style="color:var(--warning)">⚡ Infra</div><div class="sn" id="ov-inf">–/–</div><div class="ss">Infra ที่ติดตั้งแล้ว (<span id="ov-inf-pct">–</span>)</div><div class="sbar"><div class="sf" id="ov-inf-b" style="width:0%"></div></div><div class="sbadge" style="background:var(--warning-l);color:var(--warning)" id="ov-inf-badge">–</div></div>
   </div>
   <!-- ── Site breakdown table ── -->
 
@@ -1055,7 +1055,7 @@ main { padding: 12px 10px; }
       </div>
     </div>
   </div>
-  <div class="card" style="margin-bottom:14px"><div class="ch"><div class="chi" style="background:var(--warning-l);color:var(--warning)">📊</div>Site Progress</div><div id="tl-wrap"></div><div class="cleg" style="margin-top:11px"><div class="cl"><div class="cll" style="background:var(--primary)"></div>ติดตั้งแล้ว</div><div class="cl"><div class="cll" style="background:#e8dcc7"></div>คงเหลือ</div><div class="cl" style="color:var(--danger)"><span style="display:inline-block;width:2px;height:12px;background:var(--danger);margin-right:4px;vertical-align:middle"></span>วันนี้</div></div></div>
+  <div class="card" style="margin-bottom:14px"><div class="ch"><div class="chi" style="background:var(--warning-l);color:var(--warning)">📊</div>Site Progress</div><div id="tl-wrap"></div><div class="cleg" style="margin-top:11px"><div class="cl"><div class="cll" style="background:var(--primary)"></div>ติดตั้งแล้ว</div><div class="cl"><div class="cll" style="background:var(--border)"></div>คงเหลือ</div><div class="cl" style="color:var(--danger)"><span style="display:inline-block;width:2px;height:12px;background:var(--danger);margin-right:4px;vertical-align:middle"></span>วันนี้</div></div></div>
   <div class="card" style="margin-bottom:14px"><div class="ch"><div class="chi" style="background:var(--hold-l);color:var(--hold)">🗺</div>Site Heatmap</div><div class="heatmap" id="hm-wrap"></div></div>
   <div class="hold-tog" onclick="toggleHold(this)"><div class="hold-lbl">⏸ อุปกรณ์ที่ Hold</div><div style="display:flex;align-items:center;gap:7px"><span class="hold-badge" id="hold-cnt">– รายการ</span><span id="hold-arr" style="color:var(--hold);font-size:12px">▼</span></div></div>
   <div id="hold-body" style="display:none;margin-top:6px"></div>
@@ -1204,7 +1204,7 @@ main { padding: 12px 10px; }
     <div class="loc-sec-h" style="margin-bottom:0">📍 รายละเอียดแยกตามสถานที่</div>
     <div style="display:flex;gap:6px">
       <button onclick="expandAllLoc()" style="font-size:11px;padding:4px 10px;border:1px solid var(--border);border-radius:6px;background:var(--primary-l);color:var(--primary);cursor:pointer;font-family:inherit">▼ แตกทั้งหมด</button>
-      <button onclick="collapseAllLoc()" style="font-size:11px;padding:4px 10px;border:1px solid var(--border);border-radius:6px;background:#fff;color:var(--text2);cursor:pointer;font-family:inherit">▲ ยุบทั้งหมด</button>
+      <button onclick="collapseAllLoc()" style="font-size:11px;padding:4px 10px;border:1px solid var(--border);border-radius:6px;background:var(--card);color:var(--text2);cursor:pointer;font-family:inherit">▲ ยุบทั้งหมด</button>
     </div>
   </div>
   <div id="loc-list"></div>
@@ -2987,7 +2987,7 @@ function buildFabCards(){
   if(!w) return;
   w.innerHTML='';
   const pairs=[];for(let i=0;i<FABRICS.length;i+=2)pairs.push(FABRICS.slice(i,i+2));
-  w.innerHTML=pairs.map(pair=>`<div class="g2" style="margin-bottom:9px">${pair.map(f=>{const p=Math.round(f.p),swp=f.sw.t>0?Math.round(f.sw.d/f.sw.t*100):0,app=f.ap.t>0?Math.round(f.ap.d/f.ap.t*100):0,inp=f.inf.t>0?Math.round(f.inf.d/f.inf.t*100):0;const pbg=p>=80?'var(--success-l);color:#556b35':p>=30?'var(--warning-l);color:#8f3f26':'var(--primary-l);color:var(--primary)';return `<div class="fpc"><div class="fpc-h"><div class="fpc-name"><div style="width:9px;height:9px;border-radius:50%;background:${f.c}"></div>🏗 ${f.n}</div><div class="fpc-pct" style="background:${pbg}">${p}%</div></div><div class="fpc-big">${f.d}/${f.t}</div><div class="fpc-sub">อุปกรณ์ที่ติดตั้งแล้ว</div><div class="fpc-bar"><div class="fpc-fill" style="width:${p}%;background:${f.c}"></div></div><div class="fpc-cats"><div class="fcc"><div class="cl" style="color:#b8593a">🔀 Switch:</div><div class="cv">${f.sw.d}/${f.sw.t} (${swp}%)</div><div class="cb"><div class="cbf" style="width:${swp}%;background:#b8593a"></div></div></div><div class="fcc"><div class="cl" style="color:var(--success)">📶 AP:</div><div class="cv">${f.ap.d}/${f.ap.t} (${app}%)</div><div class="cb"><div class="cbf" style="width:${app}%;background:var(--success)"></div></div></div><div class="fcc"><div class="cl" style="color:var(--warning)">⚡ Infra:</div><div class="cv">${f.inf.d}/${f.inf.t} (${inp}%)</div><div class="cb"><div class="cbf" style="width:${inp}%;background:var(--warning)"></div></div></div></div><div class="fpc-dates"><div class="fdate"><div class="dl">เริ่ม:</div><div class="dv">${f.s}</div></div><div class="fdate"><div class="dl">สิ้นสุด:</div><div class="dv">${f.e}</div></div></div></div>`;}).join('')}</div>`).join('');
+  w.innerHTML=pairs.map(pair=>`<div class="g2" style="margin-bottom:9px">${pair.map(f=>{const p=Math.round(f.p),swp=f.sw.t>0?Math.round(f.sw.d/f.sw.t*100):0,app=f.ap.t>0?Math.round(f.ap.d/f.ap.t*100):0,inp=f.inf.t>0?Math.round(f.inf.d/f.inf.t*100):0;const pbg=p>=80?'var(--success-l);color:#556b35':p>=30?'var(--warning-l);color:#8f3f26':'var(--primary-l);color:var(--primary)';return `<div class="fpc"><div class="fpc-h"><div class="fpc-name"><div style="width:9px;height:9px;border-radius:50%;background:${f.c}"></div>🏗 ${f.n}</div><div class="fpc-pct" style="background:${pbg}">${p}%</div></div><div class="fpc-big">${f.d}/${f.t}</div><div class="fpc-sub">อุปกรณ์ที่ติดตั้งแล้ว</div><div class="fpc-bar"><div class="fpc-fill" style="width:${p}%;background:${f.c}"></div></div><div class="fpc-cats"><div class="fcc"><div class="cl" style="color:var(--primary)">🔀 Switch:</div><div class="cv">${f.sw.d}/${f.sw.t} (${swp}%)</div><div class="cb"><div class="cbf" style="width:${swp}%;background:#b8593a"></div></div></div><div class="fcc"><div class="cl" style="color:var(--success)">📶 AP:</div><div class="cv">${f.ap.d}/${f.ap.t} (${app}%)</div><div class="cb"><div class="cbf" style="width:${app}%;background:var(--success)"></div></div></div><div class="fcc"><div class="cl" style="color:var(--warning)">⚡ Infra:</div><div class="cv">${f.inf.d}/${f.inf.t} (${inp}%)</div><div class="cb"><div class="cbf" style="width:${inp}%;background:var(--warning)"></div></div></div></div><div class="fpc-dates"><div class="fdate"><div class="dl">เริ่ม:</div><div class="dv">${f.s}</div></div><div class="fdate"><div class="dl">สิ้นสุด:</div><div class="dv">${f.e}</div></div></div></div>`;}).join('')}</div>`).join('');
 }
 
 // ── FABRIC BREAKDOWN TABLE ───────────────────────────────────────────────────
