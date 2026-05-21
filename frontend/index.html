@@ -73,11 +73,11 @@ body{font-family:'IBM Plex Sans Thai','Segoe UI',Tahoma,sans-serif;background:va
 .ins-panels{display:flex;flex-direction:row;align-items:stretch;gap:14px;margin-bottom:12px}
 
 /* LEFT: alert card */
-.ins-alert-card{flex:1;min-width:0;background:var(--card);border:1px solid #fed7aa;border-left:4px solid var(--danger);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.ins-alert-card{flex:1;min-width:0;background:var(--card);border:1px solid rgba(251,191,36,0.3);border-left:4px solid var(--danger);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
 .ins-alert-head{display:flex;align-items:flex-start;gap:10px}
-.ins-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#c08a2e,#ff6b35);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;box-shadow:0 3px 10px rgba(255,159,67,.35)}
+.ins-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#fbbf24,#f87171);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;box-shadow:0 3px 10px rgba(255,159,67,.35)}
 .ins-big{font-size:15px;font-weight:700;color:#b45309;line-height:1.3}
-.ins-big em{font-size:22px;font-style:normal;color:#c08a2e;margin-right:2px}
+.ins-big em{font-size:22px;font-style:normal;color:var(--warning);margin-right:2px}
 .ins-pct-tag{font-size:11px;font-weight:500;color:var(--primary);background:rgba(78,158,255,0.15);padding:2px 8px;border-radius:99px;margin-left:4px;white-space:nowrap}
 .ins-rate-row{display:flex;align-items:center;gap:8px;background:#faf6ef;border-radius:8px;padding:8px 12px;flex-wrap:wrap}
 .ins-rate-lbl{font-size:12px;color:var(--text2)}
@@ -151,7 +151,7 @@ main{max-width:1360px;margin:0 auto;padding:18px 14px}
 .scard{border-radius:var(--rsm);padding:15px 16px;border:1px solid var(--border);background:var(--card);box-shadow:var(--sh);position:relative;overflow:hidden}
 .scard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
 .scard.all::before{background:linear-gradient(90deg,var(--primary),var(--primary-m))}
-.scard.sw::before{background:linear-gradient(90deg,#b8593a,#d98967)}
+.scard.sw::before{background:linear-gradient(90deg,#4e9eff,#60a5fa)}
 .scard.ap::before{background:linear-gradient(90deg,var(--success),#52e3aa)}
 .scard.inf::before{background:linear-gradient(90deg,var(--warning),#ffd36b)}
 .scard .sl{font-size:11px;font-weight:500;margin-bottom:5px}
@@ -160,7 +160,7 @@ main{max-width:1360px;margin:0 auto;padding:18px 14px}
 .scard .sbar{height:5px;background:var(--border);border-radius:99px;margin-top:9px;overflow:hidden}
 .scard .sf{height:100%;border-radius:99px;transition:width 1s ease}
 .scard.all .sf{background:linear-gradient(90deg,var(--primary),var(--primary-m))}
-.scard.sw  .sf{background:linear-gradient(90deg,#b8593a,#d98967)}
+.scard.sw  .sf{background:linear-gradient(90deg,#4e9eff,#60a5fa)}
 .scard.ap  .sf{background:linear-gradient(90deg,var(--success),#52e3aa)}
 .scard.inf .sf{background:linear-gradient(90deg,var(--warning),#ffd36b)}
 .scard .sbadge{position:absolute;top:14px;right:14px;padding:2px 8px;border-radius:99px;font-size:11px;font-weight:600}
@@ -184,7 +184,7 @@ main{max-width:1360px;margin:0 auto;padding:18px 14px}
 .tlt{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;align-items:center}
 .tln{font-weight:600}
 .tlpct{font-size:11px;font-weight:600;padding:2px 7px;border-radius:99px}
-.tltrack{height:17px;background:#fbeade;border-radius:5px;position:relative}
+.tltrack{height:17px;background:var(--primary-l);border-radius:5px;position:relative}
 .tlfill{height:100%;border-radius:5px 0 0 5px;display:flex;align-items:center;padding-left:6px;font-size:10px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;transition:width 1.2s cubic-bezier(.23,1,.32,1)}
 .tltd{position:absolute;top:0;bottom:0;width:2px;border-radius:1px}
 
@@ -195,10 +195,10 @@ main{max-width:1360px;margin:0 auto;padding:18px 14px}
 .hmc .hmn{font-size:11px;font-weight:600;margin-bottom:5px}
 .hmc .hmp{font-size:24px;font-weight:700;line-height:1}
 .hmc .hms{font-size:10px;margin-top:3px}
-.hm0{background:#f5f7fa;color:var(--text3);border-color:#e8dcc7}
+.hm0{background:var(--bg-2);color:var(--text3);border-color:var(--border)}
 .hmlo{background:rgba(251,191,36,0.15);color:#fbbf24}
 .hmmi{background:rgba(78,158,255,0.15);color:#4e9eff}
-.hmhi{background:#ecfdf5;color:#556b35}
+.hmhi{background:var(--success-l);color:var(--success)}
 .hmfu{background:linear-gradient(135deg,#7a8f4c,#0e9e73);color:#fff}
 
 /* HOLD */
@@ -699,7 +699,7 @@ main { padding: 12px 10px; }
   /* ── Layout ── */
   body { background: #fff !important; }
   main { padding: 0 !important; max-width: 100% !important; }
-  .card { break-inside: avoid; border: 1px solid #e8dcc7 !important; }
+  .card { break-inside: avoid; border: 1px solid var(--border) !important; }
   .g2 { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
   .g3 { grid-template-columns: 1fr 1fr 1fr !important; gap: 8px !important; }
   .g4 { grid-template-columns: repeat(4,1fr) !important; gap: 8px !important; }
@@ -784,7 +784,7 @@ main { padding: 12px 10px; }
     <div class="tb-div"></div>
     <div class="tb-stat"><div class="v" id="tb-days">–</div><div class="l">วันเหลือ</div></div>
     <div class="tb-div"></div>
-    <div class="tb-stat"><div class="v" id="tb-over" style="color:#c08a2e">35</div><div class="l">เกินกำหนด</div></div>
+    <div class="tb-stat"><div class="v" id="tb-over" style="color:var(--warning)">35</div><div class="l">เกินกำหนด</div></div>
   </div>
   <div style="display:flex;gap:6px">
     <button class="tbtn" id="auto-sync-btn" onclick="toggleAutoSync()">🔄 ซิงค์อัตโนมัติ</button>
@@ -802,7 +802,7 @@ main { padding: 12px 10px; }
     <!-- LEFT: insight alert card -->
     <div class="ins-alert-card">
       <div class="ins-alert-head">
-        <div class="ins-icon" style="background:linear-gradient(135deg,#ff6b35,#a8452e);display:flex;align-items:center;justify-content:center">
+        <div class="ins-icon" style="background:linear-gradient(135deg,#f87171,#dc2626);display:flex;align-items:center;justify-content:center">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <!-- Rocket body -->
             <path d="M12 2C12 2 7 6 7 12l5 3 5-3c0-6-5-10-5-10z" fill="rgba(255,255,255,0.3)" stroke="#fff"/>
@@ -1047,7 +1047,7 @@ main { padding: 12px 10px; }
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center">
           <span style="display:flex;align-items:center;gap:7px">
-            <span style="width:12px;height:12px;border-radius:3px;background:#e8dcc7;display:inline-block;flex-shrink:0"></span>
+            <span style="width:12px;height:12px;border-radius:3px;background:var(--border);display:inline-block;flex-shrink:0"></span>
             รอดำเนินการ
           </span>
           <span style="font-weight:600;font-size:14px" id="donut-pending-cnt">–</span>
@@ -1085,14 +1085,14 @@ main { padding: 12px 10px; }
   <!-- SW -->
   <div class="card" style="margin-bottom:14px">
     <div class="ch">
-      <div class="chi" style="background:#fbeade;color:#b8593a">🔀</div>Switch รวม — แผน vs จริง (%)
+      <div class="chi" style="background:var(--primary-l);color:var(--primary)">🔀</div>Switch รวม — แผน vs จริง (%)
       <div style="display:flex;gap:10px;margin-left:auto;font-size:11px;font-weight:400">
         <span id="prog-sw-plan-lbl" style="color:var(--text3)">แผน: –%</span>
-        <span id="prog-sw-act-lbl" style="color:#b8593a;font-weight:600">จริง: –%</span>
+        <span id="prog-sw-act-lbl" style="color:var(--primary);font-weight:600">จริง: –%</span>
       </div>
     </div>
     <div style="height:220px"><canvas id="prog-sw-c"></canvas></div>
-    <div class="cleg"><div class="cl"><div class="cld" style="border-color:#e8b99b"></div>แผน (%)</div><div class="cl"><div class="cll" style="background:#b8593a"></div>จริง (%)</div></div>
+    <div class="cleg"><div class="cl"><div class="cld" style="border-color:rgba(78,158,255,0.5)"></div>แผน (%)</div><div class="cl"><div class="cll" style="background:var(--primary)"></div>จริง (%)</div></div>
   </div>
   <!-- AP -->
   <div class="card" style="margin-bottom:14px">
@@ -1177,19 +1177,19 @@ main { padding: 12px 10px; }
   <!-- Summary bar: done vs plan per fabric -->
   <div class="card" style="margin-bottom:14px">
     <div class="ch">
-      <div class="chi" style="background:#fbeade;color:var(--primary)">📊</div>
+      <div class="chi" style="background:var(--primary-l);color:var(--primary)">📊</div>
       สรุปจำนวนติดตั้งแล้ว แยกตามสถานที่
       <span style="margin-left:8px;font-size:11px;font-weight:400;color:var(--text2)">
         ติดตั้งแล้ว <strong style="color:var(--primary)" id="plan-installed-n">–</strong> จากทั้งหมด <strong id="plan-total-n">–</strong> เครื่อง
-        <span id="plan-all-pct-badge" style="margin-left:6px;padding:2px 8px;border-radius:99px;background:#fbeade;color:var(--primary);font-size:10px;font-weight:600">รวม –%</span>
+        <span id="plan-all-pct-badge" style="margin-left:6px;padding:2px 8px;border-radius:99px;background:var(--primary-l);color:var(--primary);font-size:10px;font-weight:600">รวม –%</span>
       </span>
     </div>
     <div style="height:220px"><canvas id="fab-total-bar-c"></canvas></div>
     <div style="display:flex;gap:14px;margin-top:8px;font-size:11px;color:var(--text2)">
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:3px;border-radius:2px;background:#b8593a;display:inline-block"></span>Switch ติดตั้งแล้ว</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:3px;border-radius:2px;background:var(--primary);display:inline-block"></span>Switch ติดตั้งแล้ว</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:3px;border-radius:2px;background:#7a8f4c;display:inline-block"></span>AP ติดตั้งแล้ว</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:3px;border-radius:2px;background:#c08a2e;display:inline-block"></span>Infra ติดตั้งแล้ว</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:2px;border-top:2px dashed #9c8a74;display:inline-block"></span>เป้าหมายทั้งหมด</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:3px;border-radius:2px;background:var(--warning);display:inline-block"></span>Infra ติดตั้งแล้ว</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:2px;border-top:2px dashed var(--text3);display:inline-block"></span>เป้าหมายทั้งหมด</span>
     </div>
   </div>
 
@@ -1249,7 +1249,7 @@ main { padding: 12px 10px; }
 
   <!-- แผนการติดตั้ง 2 สัปดาห์หน้า -->
   <div id="upcoming-header" style="display:flex;align-items:center;gap:7px;margin:20px 0 10px;font-size:13px;font-weight:600;color:var(--text)">
-    <div class="sic" style="background:#faefd4;color:#c08a2e">📅</div>
+    <div class="sic" style="background:var(--warning-l);color:var(--warning)">📅</div>
     แผนการติดตั้ง 2 สัปดาห์หน้า
     <span style="font-size:11px;font-weight:400;color:var(--text2)" id="upcoming-range"></span>
   </div>
@@ -1328,7 +1328,7 @@ let DAILY_INF = []; // populated from API
 // Per-fabric daily installs
 let FAB_DAILY = {};
 // Fabric colors and totals for charts
-let FAB_COLORS = {'D1-041': '#b8593a', 'CFZ': '#7a8f4c', 'T1-015': '#c08a2e', 'D1-091': '#8b6f47', 'RFF': '#6b8599', 'AMF': '#c08a2e', 'PPW': '#c4a885'};
+let FAB_COLORS = {'D1-041': '#4e9eff', 'CFZ': '#34d399', 'T1-015': '#fbbf24', 'D1-091': '#a78bfa', 'RFF': '#f472b6', 'AMF': '#fb923c', 'PPW': '#22d3ee'};
 let FAB_TOTALS = {}; // populated from API
 
 // Plan targets (scheduled qty) per date matching DAILY_L
@@ -1365,8 +1365,8 @@ function lineOpts(color, yMax=100, yLabel='%') {
       }
     },
     scales:{
-      x:{ticks:{font:{size:10},maxRotation:45,color:'#9c8a74'},grid:{display:false}},
-      y:{min:0,max:yMax,ticks:{font:{size:10},color:'#9c8a74',callback:v=>v+'%'},grid:{color:'#f5ede0'}}
+      x:{ticks:{font:{size:10},maxRotation:45,color:'#94a3b8'},grid:{display:false}},
+      y:{min:0,max:yMax,ticks:{font:{size:10},color:'#94a3b8',callback:v=>v+'%'},grid:{color:'#1f2d45'}}
     }
   };
 }
@@ -1398,7 +1398,7 @@ function makeLineChart(canvasId, planData, actData, planColor, actColor, planLab
     const xT=x0+(x1-x0)*getTodayFrac();
     cv.save();
     cv.beginPath();cv.moveTo(xT,top);cv.lineTo(xT,bottom);
-    cv.strokeStyle='#a8452e';cv.lineWidth=1.2;cv.setLineDash([4,3]);cv.stroke();
+    cv.strokeStyle='#f87171';cv.lineWidth=1.2;cv.setLineDash([4,3]);cv.stroke();
     cv.setLineDash([]);cv.restore();
   }};
 
@@ -1414,7 +1414,7 @@ function makeLineChart(canvasId, planData, actData, planColor, actColor, planLab
         if(i!==lastIdx && i%3!==0) return;
         ctx2.save();
         ctx2.font='9px Segoe UI';
-        ctx2.fillStyle=isPlan?'#9c8a74':((actColor||'#b8593a')+'99');
+        ctx2.fillStyle=isPlan?'#94a3b8':((actColor||'#4e9eff')+'99');
         ctx2.textAlign='center';
         ctx2.textBaseline=isPlan?'bottom':'top';
         ctx2.fillText(v.toFixed(1)+'%', pt.x, isPlan?pt.y-4:pt.y+4);
@@ -1429,10 +1429,10 @@ function makeLineChart(canvasId, planData, actData, planColor, actColor, planLab
     data:{
       labels: WK,
       datasets:[
-        {label:planLabel||'แผน',data:planData,borderColor:planColor||'#6b5744',borderWidth:2,borderDash:[5,3],pointRadius:3,pointBackgroundColor:planColor||'#6b5744',tension:0.3,fill:false,spanGaps:false},
-        {label:actLabel||'จริง',data:actFull,borderColor:actColor||'#b8593a',borderWidth:2.5,
+        {label:planLabel||'แผน',data:planData,borderColor:planColor||'#94a3b8',borderWidth:2,borderDash:[5,3],pointRadius:3,pointBackgroundColor:planColor||'#94a3b8',tension:0.3,fill:false,spanGaps:false},
+        {label:actLabel||'จริง',data:actFull,borderColor:actColor||'#4e9eff',borderWidth:2.5,
          pointRadius:(c)=>c.parsed.y!=null?4:0,
-         pointBackgroundColor:actColor||'#b8593a',tension:0.3,fill:false,spanGaps:false}
+         pointBackgroundColor:actColor||'#4e9eff',tension:0.3,fill:false,spanGaps:false}
       ]
     },
     options:{...lineOpts(actColor),layout:{padding:{top:18,bottom:12}}}
@@ -1685,7 +1685,7 @@ function buildVelocityChart(){
             callback(val,i){ return [sliceLabels[i], sliceDateLabels[i]]; }
           }
         },
-        y:{grid:{color:'#f5ede0'},ticks:{font:{size:10}},min:0}
+        y:{grid:{color:'#1f2d45'},ticks:{font:{size:10}},min:0}
       }
     }
   });
@@ -1780,7 +1780,7 @@ function buildFabGap(){
         }
       },
       scales:{
-        x:{ticks:{font:{size:10}},grid:{color:'#f5ede0'},min:0},
+        x:{ticks:{font:{size:10}},grid:{color:'#1f2d45'},min:0},
         y:{ticks:{font:{size:11},color:'#3d2817'},grid:{display:false}}
       }
     }
@@ -1881,7 +1881,7 @@ function buildWeekdayChart(){
       },
       scales:{
         x:{stacked:true, grid:{display:false}, ticks:{font:{size:10},color:'#3d2817'}},
-        y:{stacked:true, grid:{color:'#f5ede0'}, ticks:{font:{size:10}}, min:0}
+        y:{stacked:true, grid:{color:'#1f2d45'}, ticks:{font:{size:10}}, min:0}
       }
     }
   });
@@ -1954,7 +1954,7 @@ function buildBurndown(){
     const x=chart.getDatasetMeta(0).data[tIdx].x;
     ctx.save();
     ctx.beginPath();ctx.moveTo(x,top);ctx.lineTo(x,bottom);
-    ctx.strokeStyle='#a8452e';ctx.lineWidth=1.5;ctx.setLineDash([5,3]);ctx.stroke();
+    ctx.strokeStyle='#f87171';ctx.lineWidth=1.5;ctx.setLineDash([5,3]);ctx.stroke();
     ctx.setLineDash([]);
     ctx.font='bold 10px Segoe UI,sans-serif';
     const tw=ctx.measureText(todayLbl).width;
@@ -1991,10 +1991,10 @@ function buildBurndown(){
         }
       },
       scales:{
-        x:{ticks:{font:{size:9},maxRotation:45,color:'#9c8a74',
+        x:{ticks:{font:{size:9},maxRotation:45,color:'#94a3b8',
              callback:(v,i)=>i%tickStep===0?_labels[i]:null},grid:{display:false}},
-        y:{min:0,suggestedMax:window.TOTAL_CNX||252,ticks:{font:{size:10},color:'#9c8a74',
-             callback:v=>v.toLocaleString()},grid:{color:'#f5ede0'}}
+        y:{min:0,suggestedMax:window.TOTAL_CNX||252,ticks:{font:{size:10},color:'#94a3b8',
+             callback:v=>v.toLocaleString()},grid:{color:'#1f2d45'}}
       }
     }
   });
@@ -2037,7 +2037,7 @@ function buildTimeline(){
     const gap=p-pp;
     const gapStr=(gap>=0?'+':'')+gap+'%';
     const gapColor=gap>=0?'#7a8f4c':'#a8452e';
-    const bg=p>=80?'#ecfdf5;color:#556b35':p>=30?'#faefd4;color:#8f3f26':'#fbeade;color:var(--primary)';
+    const bg=p>=80?'#ecfdf5;color:var(--success)':p>=30?'#faefd4;color:var(--warning)':'#fbeade;color:var(--primary)';
 
     const _fname = f.n||f.name||'';
     const _fcolor = f.c||'#b8593a';
@@ -2100,7 +2100,7 @@ function buildDailyChart(canvasId, labels, planData, actData, planColor, actColo
     const x=chart.getDatasetMeta(0).data[tIdx].x;
     cv.save();
     cv.beginPath();cv.moveTo(x,top);cv.lineTo(x,bottom);
-    cv.strokeStyle='#a8452e';cv.lineWidth=1.5;cv.setLineDash([5,3]);cv.stroke();
+    cv.strokeStyle='#f87171';cv.lineWidth=1.5;cv.setLineDash([5,3]);cv.stroke();
     cv.setLineDash([]);
     // pill วันที่
     cv.font='bold 9px Segoe UI,sans-serif';
@@ -2126,7 +2126,7 @@ function buildDailyChart(canvasId, labels, planData, actData, planColor, actColo
       const isPlan=di===0;
       ctx2.save();
       ctx2.font='bold 9px Segoe UI';
-      ctx2.fillStyle=isPlan?(planColor||'#9c8a74'):(actColor||'#b8593a');
+      ctx2.fillStyle=isPlan?(planColor||'#9c8a74'):(actColor||'#4e9eff');
       ctx2.textAlign='left';
       ctx2.textBaseline=isPlan?'bottom':'top';
       const suffix=yUnit==='%'?'%':' เครื่อง';
@@ -2136,7 +2136,7 @@ function buildDailyChart(canvasId, labels, planData, actData, planColor, actColo
   }};
 
   // actColor with opacity สำหรับ fill (robust — handle any color format)
-  const _hex6 = (actColor||'#b8593a').replace('#','').slice(0,6);
+  const _hex6 = (actColor||'#4e9eff').replace('#','').slice(0,6);
   const _r=parseInt(_hex6.slice(0,2),16)||67, _g=parseInt(_hex6.slice(2,4),16)||97, _b=parseInt(_hex6.slice(4,6),16)||238;
   const fillBg = `rgba(${_r},${_g},${_b},0.06)`;
 
@@ -2150,9 +2150,9 @@ function buildDailyChart(canvasId, labels, planData, actData, planColor, actColo
          pointRadius:(c)=>c.dataIndex===lastActIdx?3:0,
          pointBackgroundColor:planColor||'#9c8a74',
          tension:0.3,fill:false,spanGaps:true},
-        {label:'จริง',data:actData,borderColor:actColor||'#b8593a',borderWidth:2.5,
+        {label:'จริง',data:actData,borderColor:actColor||'#4e9eff',borderWidth:2.5,
          pointRadius:(c)=>c.dataIndex===lastActIdx?3:0,
-         pointBackgroundColor:actColor||'#b8593a',tension:0.3,
+         pointBackgroundColor:actColor||'#4e9eff',tension:0.3,
          fill:true,backgroundColor:fillBg,spanGaps:false},
       ]
     },
@@ -2174,13 +2174,13 @@ function buildDailyChart(canvasId, labels, planData, actData, planColor, actColo
         }
       },
       scales:{
-        x:{ticks:{font:{size:9},maxRotation:45,color:'#9c8a74',
+        x:{ticks:{font:{size:9},maxRotation:45,color:'#94a3b8',
              callback:(v,i)=>i%tickStep===0?labels[i]:null},
            grid:{display:false}},
         y:{min:0,max:yMax||100,
-           ticks:{font:{size:10},color:'#9c8a74',stepSize:yUnit==='%'?10:undefined,
+           ticks:{font:{size:10},color:'#94a3b8',stepSize:yUnit==='%'?10:undefined,
              callback:v=>yUnit==='%'?v+'%':v.toLocaleString()},
-           grid:{color:'#f5ede0'}}
+           grid:{color:'#1f2d45'}}
       }
     }
   });
@@ -2216,7 +2216,7 @@ function buildProgressCharts(){
       const x=chart.getDatasetMeta(0).data[tIdx].x;
       cv.save();
       cv.beginPath();cv.moveTo(x,top);cv.lineTo(x,bottom);
-      cv.strokeStyle='#a8452e';cv.lineWidth=1.5;cv.setLineDash([5,3]);cv.stroke();
+      cv.strokeStyle='#f87171';cv.lineWidth=1.5;cv.setLineDash([5,3]);cv.stroke();
       cv.setLineDash([]);
       cv.font='bold 10px Segoe UI,sans-serif';
       const tw=cv.measureText(todayLbl).width;
@@ -2239,7 +2239,7 @@ function buildProgressCharts(){
         const isPlan=di===0;
         ctx.save();
         ctx.font='bold 9px Segoe UI';
-        ctx.fillStyle=isPlan?'#9c8a74':'#b8593a';
+        ctx.fillStyle=isPlan?'#94a3b8':'#b8593a';
         ctx.textAlign='left';
         ctx.textBaseline=isPlan?'bottom':'top';
         ctx.fillText(v.toFixed(1)+'%', pt.x+5, isPlan?pt.y-2:pt.y+2);
@@ -2279,11 +2279,11 @@ function buildProgressCharts(){
           }
         },
         scales:{
-          x:{ticks:{font:{size:9},maxRotation:45,color:'#9c8a74',
+          x:{ticks:{font:{size:9},maxRotation:45,color:'#94a3b8',
                callback:(v,i)=>useDaily?(i%7===0?_pLabels[i]:null):_pLabels[i]},
              grid:{display:false}},
-          y:{min:0,max:100,ticks:{font:{size:10},color:'#9c8a74',stepSize:10,callback:v=>v+'%'},
-             grid:{color:'#f5ede0'}}
+          y:{min:0,max:100,ticks:{font:{size:10},color:'#94a3b8',stepSize:10,callback:v=>v+'%'},
+             grid:{color:'#1f2d45'}}
         }
       }
     });
@@ -2369,8 +2369,8 @@ function buildProgressCharts(){
       '</div>'+
       '<div style="height:190px"><canvas id="'+cid+'"></canvas></div>'+
       '<div class="cleg" style="margin-top:6px">'+
-        '<div class="cl"><div class="cld" style="border-color:#e8b99b"></div>SW แผน</div>'+
-        '<div class="cl"><div class="cll" style="background:#b8593a"></div>SW จริง</div>'+
+        '<div class="cl"><div class="cld" style="border-color:rgba(78,158,255,0.5)"></div>SW แผน</div>'+
+        '<div class="cl"><div class="cll" style="background:var(--primary)"></div>SW จริง</div>'+
         '<div class="cl"><div class="cld" style="border-color:#c4d9a0"></div>AP แผน</div>'+
         '<div class="cl"><div class="cll" style="background:#7a8f4c"></div>AP จริง</div>'+
         '<div class="cl" style="color:var(--danger);font-size:11px">| วันนี้</div>'+
@@ -2396,7 +2396,7 @@ function buildProgressCharts(){
         const x=chart.getDatasetMeta(0).data[tIdx].x;
         cv3.save();
         cv3.beginPath();cv3.moveTo(x,top);cv3.lineTo(x,bottom);
-        cv3.strokeStyle='#a8452e';cv3.lineWidth=1.2;cv3.setLineDash([4,3]);cv3.stroke();
+        cv3.strokeStyle='#f87171';cv3.lineWidth=1.2;cv3.setLineDash([4,3]);cv3.stroke();
         cv3.setLineDash([]);
         cv3.font='bold 9px Segoe UI,sans-serif';
         const tw=cv3.measureText(_tod).width;
@@ -2478,9 +2478,9 @@ function buildProgressCharts(){
             }
           },
           scales:{
-            x:{ticks:{font:{size:9},maxRotation:45,color:'#9c8a74',
+            x:{ticks:{font:{size:9},maxRotation:45,color:'#94a3b8',
                  callback:(v,i)=>i%7===0?DAILY_PROG_LABELS[i]:null},grid:{display:false}},
-            y:{min:0,max:100,ticks:{font:{size:10},color:'#9c8a74',stepSize:10,callback:v=>v+'%'},grid:{color:'#f5ede0'}}
+            y:{min:0,max:100,ticks:{font:{size:10},color:'#94a3b8',stepSize:10,callback:v=>v+'%'},grid:{color:'#1f2d45'}}
           }
         }
       });
@@ -2533,10 +2533,10 @@ function buildOneFabChart(fab) {
         }
       },
       scales:{
-        x:{stacked:true, ticks:{font:{size:9},maxRotation:45,color:'#9c8a74',
+        x:{stacked:true, ticks:{font:{size:9},maxRotation:45,color:'#94a3b8',
              autoSkip:true, maxTicksLimit:8}, grid:{display:false}},
-        y:{stacked:true, min:0, ticks:{font:{size:9},color:'#9c8a74',callback:v=>v||''},
-             grid:{color:'#f5ede0'}}
+        y:{stacked:true, min:0, ticks:{font:{size:9},color:'#94a3b8',callback:v=>v||''},
+             grid:{color:'#1f2d45'}}
       }
     }
   });
@@ -2600,7 +2600,7 @@ function buildGraphs(){
       }
     },
     scales:{
-      y:{max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'#f5ede0'}},
+      y:{max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'#1f2d45'}},
       x:{ticks:{font:{size:10}},grid:{display:false}}
     }
   }
@@ -2626,7 +2626,7 @@ function buildGraphs(){
         plugins:{legend:{position:'bottom',labels:{font:{size:10},boxWidth:10}},
           tooltip:{backgroundColor:'rgba(30,45,77,.92)',titleColor:'#fff',bodyColor:'rgba(255,255,255,.8)',padding:10,cornerRadius:8,
             callbacks:{footer:items=>`รวม: ${items.reduce((a,c)=>a+c.parsed.y,0)} เครื่อง`}}},
-        scales:{y:{ticks:{font:{size:10}},grid:{color:'#f5ede0'}},x:{ticks:{font:{size:10}},grid:{display:false}}}
+        scales:{y:{ticks:{font:{size:10}},grid:{color:'#1f2d45'}},x:{ticks:{font:{size:10}},grid:{display:false}}}
       }
     });
   }
@@ -2652,7 +2652,7 @@ function buildGraphs(){
         const x=chart.getDatasetMeta(0).data[tIdx].x;
         cv2.save();
         cv2.beginPath();cv2.moveTo(x,top);cv2.lineTo(x,bottom);
-        cv2.strokeStyle='#a8452e';cv2.lineWidth=1.5;cv2.setLineDash([5,3]);cv2.stroke();
+        cv2.strokeStyle='#f87171';cv2.lineWidth=1.5;cv2.setLineDash([5,3]);cv2.stroke();
         cv2.setLineDash([]);
         cv2.font='bold 9px Segoe UI';
         const tw2=cv2.measureText(_todayL).width;
@@ -2700,8 +2700,8 @@ function buildGraphs(){
             }
           },
           scales:{
-            y:{ticks:{font:{size:10}},grid:{color:'#f5ede0'}},
-            x:{ticks:{font:{size:8},maxRotation:45,color:'#9c8a74',
+            y:{ticks:{font:{size:10}},grid:{color:'#1f2d45'}},
+            x:{ticks:{font:{size:8},maxRotation:45,color:'#94a3b8',
                 callback:(v,i)=>i%7===0?DAILY_L[i]:null},grid:{display:false}}
           }
         }
@@ -2709,7 +2709,7 @@ function buildGraphs(){
     }
   }
   const tl=[['อาคารสนง.',38],['Concourse D',33],['Concourse A',85],['AIMS',16],['Concourse C',69],['CFZ BFZ',100],['Concourse G',0],['AMF1',4]];
-  if(document.getElementById('loc-bar-c')) new Chart(document.getElementById('loc-bar-c'),{type:'bar',data:{labels:tl.map(l=>l[0]),datasets:[{data:tl.map(l=>l[1]),backgroundColor:tl.map(l=>l[1]>=80?'#7a8f4c':l[1]>=30?'#c08a2e':'#b8593a'),borderRadius:5}]},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(30,45,77,.92)',titleColor:'#fff',bodyColor:'rgba(255,255,255,.8)',padding:10,cornerRadius:8,callbacks:{label:(c)=>` ${c.parsed.y}%`}}},scales:{y:{max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'#f5ede0'}},x:{ticks:{font:{size:9},maxRotation:45},grid:{display:false}}}}});
+  if(document.getElementById('loc-bar-c')) new Chart(document.getElementById('loc-bar-c'),{type:'bar',data:{labels:tl.map(l=>l[0]),datasets:[{data:tl.map(l=>l[1]),backgroundColor:tl.map(l=>l[1]>=80?'#7a8f4c':l[1]>=30?'#c08a2e':'#b8593a'),borderRadius:5}]},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(30,45,77,.92)',titleColor:'#fff',bodyColor:'rgba(255,255,255,.8)',padding:10,cornerRadius:8,callbacks:{label:(c)=>` ${c.parsed.y}%`}}},scales:{y:{max:100,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'#1f2d45'}},x:{ticks:{font:{size:9},maxRotation:45},grid:{display:false}}}}});
   if(document.getElementById('wd-cells') && DAILY_L.length){
     // ผลรวมแยกตามวันในสัปดาห์ (จ,อ,พ,พฤ,ศ,ส,อา) ตั้งแต่เริ่มต้นจนปัจจุบัน
     const _dowNames=['อา.','จ.','อ.','พ.','พฤ.','ศ.','ส.'];
@@ -2797,8 +2797,8 @@ function buildGraphs(){
         datalabels: false,
       },
       scales:{
-        x:{stacked:true,ticks:{font:{size:11},color:'#9c8a74',maxRotation:45},grid:{display:false}},
-        y:{stacked:true,min:0,ticks:{font:{size:10},color:'#9c8a74',callback:v=>v+' เครื่อง'},grid:{color:'#f5ede0'}}
+        x:{stacked:true,ticks:{font:{size:11},color:'#94a3b8',maxRotation:45},grid:{display:false}},
+        y:{stacked:true,min:0,ticks:{font:{size:10},color:'#94a3b8',callback:v=>v+' เครื่อง'},grid:{color:'#1f2d45'}}
       }
     },
     plugins:[{
@@ -2879,9 +2879,9 @@ function buildGraphs(){
       </div>
       ${chartHtml}
       <div style="display:flex;gap:12px;margin-top:8px;font-size:11px;color:var(--text2);flex-wrap:wrap">
-        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:#b8593a;display:inline-block"></span>Switch</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--primary);display:inline-block"></span>Switch</span>
         <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:#7a8f4c;display:inline-block"></span>AP</span>
-        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:#c08a2e;display:inline-block"></span>Infra</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;border-radius:2px;background:var(--warning);display:inline-block"></span>Infra</span>
         <span style="display:flex;align-items:center;gap:4px"><span style="width:16px;height:0;border-top:2px dashed ${fabColor};display:inline-block"></span>เป้าตามแผน</span>
       </div>`;
     wrap.appendChild(div);
@@ -2925,13 +2925,13 @@ function buildLocList(){
       const bc=done?'#7a8f4c':pc>=80?'var(--success)':pc>=30?'var(--warning)':'var(--danger)';
       const pctC=done?'#556b35':pc>=80?'var(--success)':pc>=30?'var(--warning)':'var(--danger)';
       const rowBg=done?'background:var(--success-l);border-left:3px solid #7a8f4c;':'border-left:3px solid transparent;';
-      const badge=done?'<span style="font-size:10px;font-weight:700;background:#edf0e0;color:#556b35;padding:1px 7px;border-radius:99px;margin-left:6px;flex-shrink:0">✓ 100%</span>':'';
+      const badge=done?'<span style="font-size:10px;font-weight:700;background:var(--success-l);color:var(--success);padding:1px 7px;border-radius:99px;margin-left:6px;flex-shrink:0">✓ 100%</span>':'';
       return '<div class="locrow" style="'+rowBg+'">'
         +'<div style="display:flex;align-items:center;gap:6px;flex:1;min-width:0">'
           +'<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="'+(done?'#7a8f4c':col)+'" stroke-width="2.5">'
             +'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>'
           +'</svg>'
-          +'<span class="locname" style="'+(done?'color:#556b35;':'')+'">'+(r.l||'–')+'</span>'
+          +'<span class="locname" style="'+(done?'color:var(--success);':'')+'">'+(r.l||'–')+'</span>'
           +badge
         +'</div>'
         +'<div class="loci">'
@@ -2987,7 +2987,7 @@ function buildFabCards(){
   if(!w) return;
   w.innerHTML='';
   const pairs=[];for(let i=0;i<FABRICS.length;i+=2)pairs.push(FABRICS.slice(i,i+2));
-  w.innerHTML=pairs.map(pair=>`<div class="g2" style="margin-bottom:9px">${pair.map(f=>{const p=Math.round(f.p),swp=f.sw.t>0?Math.round(f.sw.d/f.sw.t*100):0,app=f.ap.t>0?Math.round(f.ap.d/f.ap.t*100):0,inp=f.inf.t>0?Math.round(f.inf.d/f.inf.t*100):0;const pbg=p>=80?'var(--success-l);color:#556b35':p>=30?'var(--warning-l);color:#8f3f26':'var(--primary-l);color:var(--primary)';return `<div class="fpc"><div class="fpc-h"><div class="fpc-name"><div style="width:9px;height:9px;border-radius:50%;background:${f.c}"></div>🏗 ${f.n}</div><div class="fpc-pct" style="background:${pbg}">${p}%</div></div><div class="fpc-big">${f.d}/${f.t}</div><div class="fpc-sub">อุปกรณ์ที่ติดตั้งแล้ว</div><div class="fpc-bar"><div class="fpc-fill" style="width:${p}%;background:${f.c}"></div></div><div class="fpc-cats"><div class="fcc"><div class="cl" style="color:var(--primary)">🔀 Switch:</div><div class="cv">${f.sw.d}/${f.sw.t} (${swp}%)</div><div class="cb"><div class="cbf" style="width:${swp}%;background:#b8593a"></div></div></div><div class="fcc"><div class="cl" style="color:var(--success)">📶 AP:</div><div class="cv">${f.ap.d}/${f.ap.t} (${app}%)</div><div class="cb"><div class="cbf" style="width:${app}%;background:var(--success)"></div></div></div><div class="fcc"><div class="cl" style="color:var(--warning)">⚡ Infra:</div><div class="cv">${f.inf.d}/${f.inf.t} (${inp}%)</div><div class="cb"><div class="cbf" style="width:${inp}%;background:var(--warning)"></div></div></div></div><div class="fpc-dates"><div class="fdate"><div class="dl">เริ่ม:</div><div class="dv">${f.s}</div></div><div class="fdate"><div class="dl">สิ้นสุด:</div><div class="dv">${f.e}</div></div></div></div>`;}).join('')}</div>`).join('');
+  w.innerHTML=pairs.map(pair=>`<div class="g2" style="margin-bottom:9px">${pair.map(f=>{const p=Math.round(f.p),swp=f.sw.t>0?Math.round(f.sw.d/f.sw.t*100):0,app=f.ap.t>0?Math.round(f.ap.d/f.ap.t*100):0,inp=f.inf.t>0?Math.round(f.inf.d/f.inf.t*100):0;const pbg=p>=80?'var(--success-l);color:var(--success)':p>=30?'var(--warning-l);color:var(--warning)':'var(--primary-l);color:var(--primary)';return `<div class="fpc"><div class="fpc-h"><div class="fpc-name"><div style="width:9px;height:9px;border-radius:50%;background:${f.c}"></div>🏗 ${f.n}</div><div class="fpc-pct" style="background:${pbg}">${p}%</div></div><div class="fpc-big">${f.d}/${f.t}</div><div class="fpc-sub">อุปกรณ์ที่ติดตั้งแล้ว</div><div class="fpc-bar"><div class="fpc-fill" style="width:${p}%;background:${f.c}"></div></div><div class="fpc-cats"><div class="fcc"><div class="cl" style="color:var(--primary)">🔀 Switch:</div><div class="cv">${f.sw.d}/${f.sw.t} (${swp}%)</div><div class="cb"><div class="cbf" style="width:${swp}%;background:var(--primary)"></div></div></div><div class="fcc"><div class="cl" style="color:var(--success)">📶 AP:</div><div class="cv">${f.ap.d}/${f.ap.t} (${app}%)</div><div class="cb"><div class="cbf" style="width:${app}%;background:var(--success)"></div></div></div><div class="fcc"><div class="cl" style="color:var(--warning)">⚡ Infra:</div><div class="cv">${f.inf.d}/${f.inf.t} (${inp}%)</div><div class="cb"><div class="cbf" style="width:${inp}%;background:var(--warning)"></div></div></div></div><div class="fpc-dates"><div class="fdate"><div class="dl">เริ่ม:</div><div class="dv">${f.s}</div></div><div class="fdate"><div class="dl">สิ้นสุด:</div><div class="dv">${f.e}</div></div></div></div>`;}).join('')}</div>`).join('');
 }
 
 // ── FABRIC BREAKDOWN TABLE ───────────────────────────────────────────────────
@@ -3123,8 +3123,8 @@ function buildFabBreakdown(){
   const pct = (d,t)=> t>0?Math.round(d/t*100):0;
   tfoot.innerHTML = `<tr>
     <td style="font-weight:600;color:var(--text)">รวมทั้งหมด</td>
-    <td class="fab-cell" style="font-weight:700;color:#b8593a">${tSwD}</td>
-    <td style="color:var(--text2)">${tSwT} <span style="font-size:10px;background:#fbeade;color:#b8593a;padding:1px 5px;border-radius:4px">${pct(tSwD,tSwT)}%</span></td>
+    <td class="fab-cell" style="font-weight:700;color:var(--primary)">${tSwD}</td>
+    <td style="color:var(--text2)">${tSwT} <span style="font-size:10px;background:var(--primary-l);color:var(--primary);padding:1px 5px;border-radius:4px">${pct(tSwD,tSwT)}%</span></td>
     <td class="fab-cell" style="font-weight:700;color:var(--success)">${tApD}</td>
     <td style="color:var(--text2)">${tApT} <span style="font-size:10px;background:var(--success-l);color:var(--success);padding:1px 5px;border-radius:4px">${pct(tApD,tApT)}%</span></td>
     <td class="fab-cell" style="font-weight:700;color:var(--warning)">${tInfD}</td>
