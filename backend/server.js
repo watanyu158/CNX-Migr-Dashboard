@@ -641,7 +641,7 @@ const PORT = process.env.PORT||3001;
 app.listen(PORT,()=>{
   console.log(`CNX Dashboard on port ${PORT}`);
   // trigger Make.com ให้ส่ง Excel ใหม่ตอน server start
-  const MAKE_WEBHOOK = 'https://hook.eu1.make.com/6mangbq9f8j4evhdv8252x1pjvnhlwsj';
+  const MAKE_WEBHOOK = 'https://hook.eu1.make.com/od9dkoi15s5uxil2ngdhvm8ze7hyq9p9';
   require('https').request(MAKE_WEBHOOK,{method:'POST'},r=>{
     console.log('Make.com startup trigger:', r.statusCode);
   }).on('error',e=>console.log('Make.com trigger err:',e.message)).end();

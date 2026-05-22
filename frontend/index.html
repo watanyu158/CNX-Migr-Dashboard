@@ -3705,7 +3705,7 @@ function hideLoading(){}
 function updateLoadingProgress(pct, label){}
 
 async function manualRefresh(){
-  const MAKE_WEBHOOK = 'https://hook.eu1.make.com/6mangbq9f8j4evhdv8252x1pjvnhlwsj';
+  const MAKE_WEBHOOK = 'https://hook.eu1.make.com/od9dkoi15s5uxil2ngdhvm8ze7hyq9p9';
   const btns = document.querySelectorAll('[onclick*="manualRefresh"]');
   btns.forEach(b=>{ b._orig=b.textContent; b.textContent='⏳ กำลังดึงข้อมูล...'; b.disabled=true; });
 
@@ -4009,7 +4009,7 @@ function buildUpcoming(){
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
 (async()=>{
-  const MAKE_WEBHOOK = 'https://hook.eu1.make.com/6mangbq9f8j4evhdv8252x1pjvnhlwsj';
+  const MAKE_WEBHOOK = 'https://hook.eu1.make.com/od9dkoi15s5uxil2ngdhvm8ze7hyq9p9';
   const syncLbl = document.getElementById('last-sync-lbl');
   const mainEl = document.querySelector('main');
   const _setStatus = (msg) => { if(syncLbl) syncLbl.textContent = msg; };
