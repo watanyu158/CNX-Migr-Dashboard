@@ -2033,34 +2033,7 @@ function buildTimeline(){
 
   w.innerHTML=_tlItems.map((f,_fi)=>{
     const p  = f.p!=null ? Math.round(f.p) : Math.round((f.done||0)/(f.total||1)*100);
-    // คำนวณ plan % per site จาก start/end date "18 พ.ค. 69"
-    let pp = 0;
-    const _sStr = f.s||f.start;
-    const _eStr = f.e||f.end;
-    if(_sStr && _eStr){
-      const thM2={'ม.ค.':0,'ก.พ.':1,'มี.ค.':2,'เม.ย.':3,'พ.ค.':4,'มิ.ย.':5,'ก.ค.':6,'ส.ค.':7,'ก.ย.':8,'ต.ค.':9,'พ.ย.':10,'ธ.ค.':11};
-      const _parseTH=(s)=>{
-        const m=s.match(/(\d+)\s+(\S+)\s+(\d+)/);
-        if(!m) return null;
-        const day=parseInt(m[1]);
-        const mo=thM2[m[2]];
-        const yrTwo=parseInt(m[3]);
-        // ปี พ.ศ. สองหลัก เช่น 69 = 2569 พ.ศ. = 2026 ค.ศ.
-        const adYr = 2500+yrTwo-543;
-        if(mo==null) return null;
-        return new Date(adYr,mo,day);
-      };
-      const sd=_parseTH(_sStr), ed=_parseTH(_eStr);
-      const td=new Date(); td.setHours(0,0,0,0);
-      if(sd && ed && td>=sd){
-        const totalDays=Math.max(1,Math.round((ed-sd)/(24*60*60*1000)));
-        const elapsedDays=Math.round((td-sd)/(24*60*60*1000));
-        pp = Math.min(100, Math.round(elapsedDays/totalDays*100));
-      } else if(sd && ed && td<sd){
-        pp = 0; // ยังไม่เริ่ม
-      }
-    }
-    if(pp===0 && !(_sStr && _eStr)) pp = Math.min(100, Math.round(_overallPlanNow));
+    const pp = Math.min(100, Math.round(_overallPlanNow));
     const gap=p-pp;
     const gapStr=(gap>=0?'+':'')+gap+'%';
     const gapColor=gap>=0?'var(--success)':'var(--danger)';
