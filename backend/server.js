@@ -86,7 +86,7 @@ function parseData() {
     const _mig = typeof r[15]==='number' ? r[15] : 0;
     if (!_device || _qty <= 0) continue;
     _preTotal += _qty; _preInstalled += _mig;
-    const _instStr = r[20] ? toDate(r[20])?.toISOString().slice(0,10) : (r[19] ? toDate(r[19])?.toISOString().slice(0,10) : null);
+    const _instStr = r[10] ? toDate(r[10])?.toISOString().slice(0,10) : (r[20] ? toDate(r[20])?.toISOString().slice(0,10) : null);
     if (_instStr && (!_preLastInstall || _instStr > _preLastInstall)) _preLastInstall = _instStr;
   }
   const _isDoneEarly = _preTotal > 0 && _preInstalled >= _preTotal;
@@ -134,7 +134,7 @@ function parseData() {
     let helperEndStr = helperEndDt ? isoDate(helperEndDt) : helperStr;
     if (helperStr && helperStr < projStartStr) helperStr = projStartStr;
 
-    const instDt2 = toDate(r[20]) || toDate(r[19]);
+    const instDt2 = toDate(r[10]) || toDate(r[20]) || toDate(r[19]);
     let instStr2  = instDt2 ? isoDate(instDt2) : null;
     if (instStr2 && instStr2 < projStartStr) instStr2 = projStartStr;
 

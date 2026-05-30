@@ -1264,7 +1264,11 @@ const API = window.location.hostname==='localhost'?'http://localhost:3001':'http
 // ── WEEKLY DATA ───────────────────────────────────────────────────────────────
 let WK = ['09 Feb', '16 Feb', '23 Feb', '02 Mar', '09 Mar', '16 Mar', '23 Mar', '30 Mar', '06 Apr', '13 Apr', '20 Apr', '27 Apr', '04 May', '11 May', '18 May', '25 May', '01 Jun', '09 Jun', '16 Jun', '23 Jun'];
 // TODAY_WK: คำนวณจากวันปัจจุบัน GMT+7 นับจาก 9 ก.พ. 2569 (W7=09Feb=index 0)
-function _todayGMT7(){ return new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Bangkok'})); }
+let _FREEZE_DATE = null; // set จาก server เมื่องานเสร็จ
+function _todayGMT7(){ 
+  if(_FREEZE_DATE) return new Date(_FREEZE_DATE+'T00:00:00');
+  return new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Bangkok'})); 
+}
 const _wkStart   = new Date(2026, 1, 9);
 function _totalDays(){ return Math.floor((_todayGMT7() - _wkStart) / (24*60*60*1000)); }
 let TODAY_WK = 6; // populated from API
@@ -3271,6 +3275,9 @@ async function loadData(){
     TYPE_DATA.length=0;
     (types||[]).forEach(t=>TYPE_DATA.push({n:t.n,plan:t.plan,done:t.done}));
     window.TODAY_WK = d.today_wk;
+    // freeze today ถ้างานเสร็จแล้ว
+    if(d.meta.remaining <= 0 && d.last_install_date) _FREEZE_DATE = d.last_install_date;
+    else _FREEZE_DATE = null;
     window.UPCOMING = d.upcoming || {};
     TODAY_WK = d.today_wk;
     LAST_INSTALL_DATE = d.last_install_date || null;
