@@ -3400,6 +3400,7 @@ async function loadData(){
 
     // topbar
     const TOTAL_CNX = meta.total || 0; window.TOTAL_CNX = TOTAL_CNX;
+    const _isDone = meta.remaining <= 0;
     window._projStartStr = meta.proj_start || '2026-02-03';
     window._projEndStr   = meta.proj_end   || '2026-04-12';
     // อัพเดทวันเริ่ม/สิ้นสุดใน tab แผนงาน
@@ -3482,7 +3483,6 @@ async function loadData(){
     if(_e('td-ap-n'))    _e('td-ap-n').textContent    = apT.toLocaleString();
     if(_e('td-inf-n'))   _e('td-inf-n').textContent   = infT.toLocaleString();
     // Tab แผนงาน
-    const _isDone = meta.remaining <= 0;
     const effPct = _isDone ? 100 : (ins.req_rate>0 ? Math.round(ins.daily_rate/ins.req_rate*100) : 0);
     if(_e('plan-req-rate'))  _e('plan-req-rate').textContent  = _isDone ? '–' : ins.req_rate+' อุปกรณ์/วัน';
     if(_e('plan-remaining')) _e('plan-remaining').textContent = _isDone ? '✅ เสร็จสิ้น' : meta.remaining.toLocaleString()+' อุปกรณ์';
