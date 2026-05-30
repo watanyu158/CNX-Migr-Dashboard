@@ -3611,9 +3611,16 @@ async function loadData(){
 
     // pills คาดเสร็จ / วันเหลือ
     document.querySelectorAll('.ip-val').forEach(el=>{
-      const lbl=el.nextElementSibling?.textContent||'';
-      if(lbl==='คาดเสร็จ') el.textContent=finTH||'–';
+      const lbl=el.nextElementSibling?.textContent?.trim()||'';
+      if(lbl==='คาดเสร็จ'||lbl==='เสร็จสิ้น') el.textContent=finTH||'–';
       if(lbl==='วันเหลือ') el.textContent=_isDone ? '✅' : (ins.days_left||'–');
+    });
+    // เปลี่ยน label "คาดเสร็จ" → "เสร็จสิ้น" และ icon เมื่องานเสร็จ
+    document.querySelectorAll('.p-date .ip-lbl').forEach(el=>{
+      el.textContent = _isDone ? 'เสร็จสิ้น' : 'คาดเสร็จ';
+    });
+    document.querySelectorAll('.p-date .ip-icon').forEach(el=>{
+      el.textContent = _isDone ? '🎉' : '📅';
     });
     document.querySelectorAll('.ip-sub').forEach(el=>{
       if(el.closest('.p-date')){
