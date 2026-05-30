@@ -3401,6 +3401,7 @@ async function loadData(){
     // topbar
     const TOTAL_CNX = meta.total || 0; window.TOTAL_CNX = TOTAL_CNX;
     const _isDone = meta.remaining <= 0;
+    const _isOverdue = !_isDone && ins.days_left <= 0;
     window._projStartStr = meta.proj_start || '2026-02-03';
     window._projEndStr   = meta.proj_end   || '2026-04-12';
     // อัพเดทวันเริ่ม/สิ้นสุดใน tab แผนงาน
@@ -3408,7 +3409,7 @@ async function loadData(){
     if(_e('pc-proj-start')) _e('pc-proj-start').textContent=_fmtTH2(meta.proj_start);
     if(_e('pc-proj-end'))   _e('pc-proj-end').textContent=_fmtTH2(meta.proj_end);
     if(_e('ts-done'))   _e('ts-done').textContent   = `${meta.installed}/${TOTAL_CNX}`;
-    if(_e('tb-days'))   _e('tb-days').textContent   = _isDone ? '✅' : ins.days_left;
+    if(_e('tb-days')){  _e('tb-days').textContent = _isDone ? '✅' : (_isOverdue ? `เกิน ${ins.days_late} วัน` : ins.days_left); _e('tb-days').style.color = _isOverdue ? 'var(--danger)' : ''; }
     if(_e('pill-days-left')) _e('pill-days-left').textContent = _isDone ? '✅' : ins.days_left;
     if(_e('plan-days-left')) _e('plan-days-left').textContent = _isDone ? 'เสร็จสิ้น' : ins.days_left+' วัน';
     if(_e('tb-over'))   _e('tb-over').textContent   = _isDone ? '✅' : meta.overdue;
@@ -3572,6 +3573,11 @@ async function loadData(){
         w.style.color='var(--success)';
         w.style.background='rgba(45,106,79,.12)';
         w.style.borderColor='rgba(45,106,79,.3)';
+      } else if(_isOverdue){
+        w.textContent=`🚨 เกินกำหนดแล้ว ${ins.days_late} วัน — คาดเสร็จ ${finTH} (ต้องทำ ${ins.req_rate} อุปกรณ์/วัน)`;
+        w.style.color='var(--danger)';
+        w.style.background='rgba(164,22,26,.08)';
+        w.style.borderColor='rgba(164,22,26,.2)';
       } else if(!ins.daily_rate || ins.daily_rate<=0){
         w.textContent='⏳ ยังไม่มีข้อมูลการติดตั้ง';
         w.style.color='var(--text2)';
