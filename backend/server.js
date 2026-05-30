@@ -76,8 +76,26 @@ function parseData() {
   const projEndStr   = PROJ_END.toISOString().slice(0,10);
   const projDays     = Math.round((PROJ_END - PROJ_START) / 86400000);
 
-  // ── today ──
-  const today = new Date(); today.setHours(0,0,0,0);
+  // ── pre-scan หา lastInstallDate เพื่อ freeze today ถ้างานเสร็จ ──
+  let _preLastInstall = null;
+  let _preTotal = 0, _preInstalled = 0;
+  for (let i = 2; i < hktRows.length; i++) {
+    const r = hktRows[i]; if (!r) continue;
+    if (typeof r[1] !== 'string') continue;
+    const qty = typeof r[6]==='number' ? r[6] : 0;
+    const mig = typeof r[15]==='number' ? r[15] : 0;
+    if (qty <= 0) continue;
+    _preTotal += qty; _preInstalled += mig;
+    const instDt2 = toDate(r[14]) || toDate(r[15]==='number'?null:null);
+    const instStr2 = r[14] ? toDate(r[14])?.toISOString().slice(0,10) : null;
+    if (instStr2 && (!_preLastInstall || instStr2 > _preLastInstall)) _preLastInstall = instStr2;
+  }
+  const _isDoneEarly = _preTotal > 0 && _preInstalled >= _preTotal;
+
+  // ── today (freeze ถ้างานเสร็จแล้ว) ──
+  const _realToday = new Date(); _realToday.setHours(0,0,0,0);
+  const today = _isDoneEarly && _preLastInstall ? (() => { const d = new Date(_preLastInstall+'T00:00:00'); return d; })() : _realToday;
+  today.setHours(0,0,0,0);
   const todayStr = today.toISOString().slice(0,10);
   const daysLeft = Math.max(0, Math.ceil((PROJ_END - today) / 86400000));
   const elapsed  = Math.round((today - PROJ_START) / 86400000);
@@ -317,13 +335,18 @@ function parseData() {
   const dailyRate   = Math.round(totalInstalled/daysToFinish*10)/10;
   const reqRate     = daysLeft > 0 ? Math.round(remaining/daysLeft*10)/10 : remaining;
   const needMore    = Math.round((reqRate - dailyRate)*10)/10;
-  const gaugePct    = reqRate > 0 ? Math.round(dailyRate / reqRate * 100) : (totalInstalled > 0 ? 100 : 0);
-  const daysLate    = daysLeft < 0 ? Math.abs(daysLeft) : 0;
-  const finishDateObj = dailyRate > 0 ? new Date(today.getTime() + Math.ceil(remaining/dailyRate)*86400000) : null;
-  const finishDate  = finishDateObj ? finishDateObj.toISOString().slice(0,10) : null;
-  // daysEarly: บวก = ก่อนกำหนด, ลบ = ช้ากว่ากำหนด
-  const daysEarly   = finishDateObj ? Math.round((PROJ_END - finishDateObj) / 86400000) : 0;
-  const daysLateAdj = daysEarly < 0 ? Math.abs(daysEarly) : 0;
+
+  // ถ้างานเสร็จแล้ว (remaining = 0) → freeze ค่า
+  const isDone = remaining <= 0;
+  const gaugePct = isDone ? 100 : (reqRate > 0 ? Math.round(dailyRate / reqRate * 100) : (totalInstalled > 0 ? 100 : 0));
+  const daysLate = isDone ? 0 : (daysLeft < 0 ? Math.abs(daysLeft) : 0);
+  // finish_date = วันที่ติดตั้งล่าสุด (last install date)
+  const finishDateObj = isDone
+    ? (lastInstallDate || today)
+    : (dailyRate > 0 ? new Date(today.getTime() + Math.ceil(remaining/dailyRate)*86400000) : null);
+  const finishDate  = finishDateObj ? (finishDateObj instanceof Date ? finishDateObj.toISOString().slice(0,10) : finishDateObj) : null;
+  const daysEarly   = finishDateObj ? Math.round((PROJ_END - (finishDateObj instanceof Date ? finishDateObj : new Date(finishDateObj))) / 86400000) : 0;
+  const daysLateAdj = isDone ? 0 : (daysEarly < 0 ? Math.abs(daysEarly) : 0);
 
   // ── locations: site → room ──
   const locationMap = {};
