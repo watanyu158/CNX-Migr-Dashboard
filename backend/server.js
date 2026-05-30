@@ -81,14 +81,13 @@ function parseData() {
   let _preTotal = 0, _preInstalled = 0;
   for (let i = 2; i < hktRows.length; i++) {
     const r = hktRows[i]; if (!r) continue;
-    if (typeof r[1] !== 'string') continue;
-    const qty = typeof r[6]==='number' ? r[6] : 0;
-    const mig = typeof r[15]==='number' ? r[15] : 0;
-    if (qty <= 0) continue;
-    _preTotal += qty; _preInstalled += mig;
-    const instDt2 = toDate(r[14]) || toDate(r[15]==='number'?null:null);
-    const instStr2 = r[14] ? toDate(r[14])?.toISOString().slice(0,10) : null;
-    if (instStr2 && (!_preLastInstall || instStr2 > _preLastInstall)) _preLastInstall = instStr2;
+    const _device = r[3] ? String(r[3]).trim() : null;
+    const _qty = typeof r[6]==='number' ? r[6] : 0;
+    const _mig = typeof r[15]==='number' ? r[15] : 0;
+    if (!_device || _qty <= 0) continue;
+    _preTotal += _qty; _preInstalled += _mig;
+    const _instStr = r[20] ? toDate(r[20])?.toISOString().slice(0,10) : (r[19] ? toDate(r[19])?.toISOString().slice(0,10) : null);
+    if (_instStr && (!_preLastInstall || _instStr > _preLastInstall)) _preLastInstall = _instStr;
   }
   const _isDoneEarly = _preTotal > 0 && _preInstalled >= _preTotal;
 
